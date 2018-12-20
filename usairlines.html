@@ -1,0 +1,561 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>US Airlines</title>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #E60003;
+}
+a:active {
+    text-decoration: none;
+}
+</style>
+<link href="usairlines.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#FFFFFF" link="#88F1F2" vlink="#BE00C8" alink="#71FD6F" onLoad="MM_preloadImages('rollover navigation/home 2.gif','rollover navigation/aboutme 2.gif','rollover navigation/usairlines 2.gif','rollover navigation/animals 2.gif','rollover navigation/logos 2.gif','rollover navigation/games 2.gif','rollover navigation/bodysystems 2.gif','rollover navigation/usstates 2.gif','rollover navigation/mybike 2.gif','rollover navigation/philadelphiaeagles 2.gif','rollover navigation/cityofphiladelphia 2.gif','rollover navigation/imagemap 2.gif','rollover navigation/bikes 2.gif','rollover navigation/climatechange 2.gif','rollover navigation/globalwarming 2.gif','rollover navigation/earth 2.gif','rollover navigation/universe 2.gif','rollover navigation/forms 2.gif')">
+	<div align="center" id="usairlines-wrapper">
+	  <table width="75%" border="0" cellspacing="0" cellpadding="0">
+	    <tbody>
+	      <tr>
+	        <td height="18"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tbody>
+	            <tr>
+	              <td bgcolor="#2C7E00"><table border="0" width="200" cellspacing="0" cellpadding="3">
+<form name="where">
+  <tr>
+    <td width="100%">
+<select name="city" size="1" onchange="updateclock(this);"> 
+<option value="" selected>Local time</option>
+<option value="0">London GMT</option> 
+<option value="1">Rome</option>
+<option value="7">Bangkok</option>
+<option value="8">Hong Kong</option>
+<option value="9">Tokyo</option> 
+<option value="10">Sydney</option>
+<option value="12">Fiji</option>
+<option value="-10">Hawaii</option>
+<option value="-8">San Francisco</option> 
+<option value="-5">New York</option>
+<option value="-3">Buenos Aires</option>
+</select>
+
+</td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="JavaScript">
+	
+if (document.all||document.getElementById)
+document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br />')
+
+zone=0;
+isitlocal=true;
+ampm='';
+
+function updateclock(z){
+zone=z.options[z.selectedIndex].value;
+isitlocal=(z.options[0].selected)?true:false;
+}
+
+function WorldClock(){
+now=new Date();
+ofst=now.getTimezoneOffset()/60;
+secs=now.getSeconds();
+sec=-1.57+Math.PI*secs/30;
+mins=now.getMinutes();
+min=-1.57+Math.PI*mins/30;
+hr=(isitlocal)?now.getHours():(now.getHours() + parseInt(ofst)) + parseInt(zone);
+hrs=-1.575+Math.PI*hr/6+Math.PI*parseInt(now.getMinutes())/360;
+if (hr < 0) hr+=24;
+if (hr > 23) hr-=24;
+ampm = (hr > 11)?"PM":"AM";
+statusampm = ampm.toLowerCase();
+
+hr2 = hr;
+if (hr2 == 0) hr2=12;
+(hr2 < 13)?hr2:hr2 %= 12;
+if (hr2<10) hr2="0"+hr2
+
+var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
+
+if (document.all)
+worldclock.innerHTML=finaltime
+else if (document.getElementById)
+document.getElementById("worldclock").innerHTML=finaltime
+else if (document.layers){
+document.worldclockns.document.worldclockns2.document.write(finaltime)
+document.worldclockns.document.worldclockns2.document.close()
+}
+
+
+setTimeout('WorldClock()',1000);
+}
+
+window.onload=WorldClock
+//-->
+</script>
+</td>
+</form>
+  </tr>
+</table> <SCRIPT LANGUAGE=Javascript>
+
+ calendar = new Date();
+ day = calendar.getDay();
+ month = calendar.getMonth();
+ date = calendar.getDate();
+ year = calendar.getYear();
+ if (year < 1000)
+ year+=1900
+ cent = parseInt(year/100);
+ g = year % 19;
+ k = parseInt((cent - 17)/25);
+ i = (cent - parseInt(cent/4) - parseInt((cent - k)/3) + 19*g + 15) % 30;
+ i = i - parseInt(i/28)*(1 - parseInt(i/28)*parseInt(29/(i+1))*parseInt((21-g)/11));
+ j = (year + parseInt(year/4) + i + 2 - cent + parseInt(cent/4)) % 7;
+ l = i - j;
+ emonth = 3 + parseInt((l + 40)/44);
+ edate = l + 28 - 31*parseInt((emonth/4));
+ emonth--;
+ var dayname = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+ var monthname = 
+ new Array ("January","February","March","April","May","June","July","August","September","October","November","December" );
+ document.write("");
+ document.write(dayname[day] + ", ");
+ document.write(monthname[month] + " ");
+ if (date< 10) document.write("0" + date + ", ");
+         else document.write(date + ", ");
+ document.write(year + "    ");
+ // Easter
+ if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+ // January
+ if ((month == 0) && (date == 1)) document.write("New Year's Day");
+ if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+ if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+ if ((month == 0) && (day == 1) && (date > 14) && (date< 22)) document.write("Martin Luther King's Birthday");
+ // February
+ if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+ if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+ if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+ if ((month == 1) && (date== 12)) document.write("Lincoln's Birthday");
+ if((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+ if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+ if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+ if ((month == 1) && (date == 29)) document.write("Leap Day");
+ // March
+ if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+ if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+ if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+ // April
+ if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+ if ((month == 3) && (date == 8)) document.write("Buddha born");
+ if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+ if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+ if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+ if ((month == 3) && (date == 22)) document.write("Earth Day");
+ if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+ if ((month == 3) && (day == 0) && (date > 0) && (date< 8)) document.write("Daylight Savings Time Begins");
+ // May
+ if ((month == 4) && (date == 1)) document.write("May Day,   Boy's Day (Japan)");
+ if ((month == 4) && (date == 2)) document.write("Constitution Day (Japan)");
+ if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico),   Children's Day (Japan)");
+ if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+ if ((month == 4) && (day == 0) && (date > 7) && (date< 16)) document.write("Mother's Day");
+ if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+ // June
+ if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+ if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+ if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+ if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+ if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+ if((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+ if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+ if ((month == 5) && (day == 0) && (date > 15) && (date< 24)) document.write("Father's Day");
+ // July
+ if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+ if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+ if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+ // August
+ if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+ if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+ if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+ // September
+ if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+ if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+ if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+ if ((month == 8) && (day== 1)&& (date > 0) && (date< 8)) document.write("Labor Day (USA)");
+ // October
+ if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+ if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+ if ((month == 9) && (day == 1) && (date > 7) && (date< 16)) document.write("Columbus Day (USA)");
+ if ((month == 9) && (day == 0) && (date > 24) && (date< 31)) document.write("Daylight Savings Time Ends");
+ if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+ if ((month == 9) && (date == 24)) document.write("United Nations Day");
+ if ((month == 9) && (date == 31)) document.write("Halloween");
+ // November
+ if ((month == 10) && (date == 1)) document.write("All Saints Day");
+ if ((month == 10) && (date == 2)) document.write("All Souls Day");
+ if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+ if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+ if ((month == 10) && (date ==20)) document.write("Revolution Day (Mexico)");
+ if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+ if ((month == 10) && (day == 4) && (date > 23) && (date< 30)) document.write("Thanksgiving (USA)");
+ if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+ // December
+ if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+ if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+ if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+ if ((month == 11) && (date == 25)) document.write("Christmas");
+ if ((month == 11) && (date == 26)) document.write("Boxing Day");
+ if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+ document.write("<br />");
+//-->
+ </SCRIPT> 
+
+&nbsp;</td>
+                </tr>
+	            <tr>
+	              <td bgcolor="#2C7E00">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+	      <tr>
+	        <td align="center" bgcolor="#2C7E00"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','rollover navigation/home 2.gif',1)"><img src="rollover navigation/home 1.gif" alt="" width="100" height="27" id="Home"></a><a href="aboutme.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About Me','','rollover navigation/aboutme 2.gif',1)"><img src="rollover navigation/aboutme 1.gif" alt="" width="100" height="27" id="About Me"></a><a href="usairlines.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US Airlines','','rollover navigation/usairlines 2.gif',1)"><img src="rollover navigation/usairlines 1.gif" alt="" width="100" height="27" id="US Airlines"></a><a href="animals.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Animals','','rollover navigation/animals 2.gif',1)"><img src="rollover navigation/animals 1.gif" alt="" width="100" height="27" id="Animals"></a><a href="logos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logos','','rollover navigation/logos 2.gif',1)"><img src="rollover navigation/logos 1.gif" alt="" width="100" height="27" id="Logos"></a><a href="games.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Games','','rollover navigation/games 2.gif',1)"><img src="rollover navigation/games 1.gif" alt="" width="100" height="27" id="Games"></a><a href="bodysystems.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Body Systems','','rollover navigation/bodysystems 2.gif',1)"><img src="rollover navigation/bodysystems 1.gif" alt="" width="100" height="27" id="Body Systems"></a><a href="usstates.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US States','','rollover navigation/usstates 2.gif',1)"><img src="rollover navigation/usstates 1.gif" alt="" width="100" height="27" id="US States"></a><a href="mybike.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('My Bike','','rollover navigation/mybike 2.gif',1)"><img src="rollover navigation/mybike 1.gif" alt="" width="100" height="27" id="My Bike"></a><a href="philadelphiaeagles.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Philadelphia Eagles','','rollover navigation/philadelphiaeagles 2.gif',1)"><img src="rollover navigation/philadelphiaeagles 1.gif" alt="" width="100" height="27" id="Philadelphia Eagles"></a><a href="cityofphiladelphia.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('City of Philadelphia','','rollover navigation/cityofphiladelphia 2.gif',1)"><img src="rollover navigation/cityofphiladelphia 1.gif" alt="" width="100" height="27" id="City of Philadelphia"></a><a href="imagemap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image Map','','rollover navigation/imagemap 2.gif',1)"><img src="rollover navigation/imagemap 1.gif" alt="" width="100" height="27" id="Image Map"></a><a href="bikes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Bikes','','rollover navigation/bikes 2.gif',1)"><img src="rollover navigation/bikes 1.gif" alt="" width="100" height="27" id="Bikes"></a><a href="climatechange.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Climate Change','','rollover navigation/climatechange 2.gif',1)"><img src="rollover navigation/climatechange 1.gif" alt="" width="100" height="27" id="Climate Change"></a><a href="globalwarming.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Global Warming','','rollover navigation/globalwarming 2.gif',1)"><img src="rollover navigation/globalwarming 1.gif" alt="" width="100" height="27" id="Global Warming"></a><a href="earth.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Earth','','rollover navigation/earth 2.gif',1)"><img src="rollover navigation/earth 1.gif" alt="" width="100" height="27" id="Earth"></a><a href="universe.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Universe','','rollover navigation/universe 2.gif',1)"><img src="rollover navigation/universe 1.gif" alt="" width="100" height="27" id="Universe"></a><a href="forms.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Forms','','rollover navigation/forms 2.gif',1)"><img src="rollover navigation/forms 1.gif" alt="" width="100" height="27" id="Forms"></a></td>
+          </tr>
+	      <tr>
+	        <td height="2088" valign="top" bgcolor="#2C7E00"><h1>List of US Airlines</h1>
+        <table height="2094">
+            <tr>
+                <td>Airline  (External link to a webpage with more info)</td>
+                <td>Image (External link to airline's website)</td>
+                <td>IATA</td>
+                <td>ICAO</td>
+                <td>Callsign</td>
+                <td>Hubs, Secondary Hubs, and Focus Cities</td>
+                <td>Founded</td>
+                <td>Notes</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Alaska_Airlines" target="_blank">Alaska Airlines</a></td>
+                <td><a href="https://www.alaskaair.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/N588AS_Boeing_737-890_235.jpg/100px-N588AS_Boeing_737-890_235.jpg" alt="Alaska Airlines"></a></td>
+                <td>AS</td>
+                <td>ASA</td>
+                <td>ALASKA</td>
+                <td>
+                    <ul>
+                        <li>Seattle/Tacoma</li>
+                        <li>Anchorage</li>
+                        <li>Los Angeles</li>
+                        <li>Portland (OR)</li>
+                        <li>San Francisco</li>
+                        <li>San Diego</li>
+                        <li>San Jose (CA)</li>
+                    </ul>
+                </td>
+                <td>1932</td>
+                <td>
+                    <p>
+                        Founded as McGee Airways and commenced operations in 1944 as Alaska Airlines.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Allegiant_Air" target="_blank">Allegiant Air</a></td>
+                <td><a href="https://www.allegiantair.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/N304NV_Allegiant_Air_2004_Airbus_A319-112_cn_2265_%2833306953996%29.jpg/100px-N304NV_Allegiant_Air_2004_Airbus_A319-112_cn_2265_%2833306953996%29.jpg" alt="Allegiant Air"></a></td>
+                <td>G4</td>
+                <td>AAY</td>
+                <td>ALLEGIANT</td>
+                <td>
+                    <ul>
+                        <li>Las Vegas</li>
+                        <li>Bellingham</li>
+                        <li>Cincinnati</li>
+                        <li>Fort Lauderdale</li>
+                        <li>Fort Walton Beach</li>
+                        <li>Los Angeles</li>
+                        <li>Myrtle Beach</li>
+                        <li>Oakland</li>
+                        <li>Orlando/Sanford</li>
+                        <li>Phoenix/Mesa</li>
+                        <li>Pittsburgh</li>
+                        <li>Punta Gorda (FL)</li>
+                        <li>St. Petersburg/Clearwater</li>
+                    </ul>
+                </td>
+                <td>1997</td>
+                <td>
+                    <p>Founded as WestJet Express and commenced operations in 1998 as Allegiant Air.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/American_Airlines" target="_blank">American Airlines</a></td>
+                <td><a href="https://www.aa.com/homePage.do" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/American_Airlines_Boeing_777-200ER_N773AN_LHR_2014-03-29.png/100px-American_Airlines_Boeing_777-200ER_N773AN_LHR_2014-03-29.png" alt="American Airlines"></a></td>
+                <td>AA</td>
+                <td>AAL</td>
+                <td>AMERICAN</td>
+                <td>
+                    <ul>
+                        <li>Dallas/Fort Worth</li>
+                        <li>Charlotte</li>
+                        <li>Chicago-O'Hare</li>
+                        <li>Los Angeles</li>
+                        <li>Miami</li>
+                        <li>New York-JFK</li>
+                        <li>New York-LaGuardia</li>
+                        <li>Philadelphia</li>
+                        <li>Phoenix-Sky Harbor</li>
+                        <li>Washington-National</li>
+                    </ul>
+                </td>
+                <td>1926</td>
+                <td>
+                    <p>
+                        Founded as American Airways and commenced operations in 1936 as American Air Lines; largest airline in the world based on airline company revenue, scheduled passenger miles flown (per year), and fleet size.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Delta_Air_Lines" target="_blank">Delta Airlines</a></td>
+                <td><a href="https://www.delta.com/home/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Delta_Airlines_Taxi_MGA.jpg/100px-Delta_Airlines_Taxi_MGA.jpg" alt="Delta Airlines"></a></td>
+                <td>DL</td>
+                <td>DAL</td>
+                <td>DELTA</td>
+                <td>
+                    <ul>
+                        <li>Atlanta</li>
+                        <li>Detroit</li>
+                        <li>Los Angeles</li>
+                        <li>Minneapolis/St. Paul</li>
+                        <li>New York-JFK</li>
+                        <li>New York-LaGuardia</li>
+                        <li>Salt Lake City</li>
+                        <li>Seattle/Tacoma</li>
+                        <li>Boston</li>
+                        <li>Cincinnati</li>
+                        <li>Raleigh/Durham</li>
+                    </ul>
+                </td>
+                <td>1924</td>
+                <td>
+                    <p>
+                        Founded as Huff Daland Dusters and commenced operations in 1929 as Delta Air Service; largest airline in the world based on number of passengers served per year.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Frontier_Airlines" target="_blank">Frontier Airlines</a></td>
+                <td><a href="https://www.flyfrontier.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Frontier_Airlines_A321.jpg/100px-Frontier_Airlines_A321.jpg" alt="Frontier Airlines"></a></td>
+                <td>F9</td>
+                <td>FFT</td>
+                <td>FRONTIER FLIGHT</td>
+                <td>
+                    <ul>
+                        <li>Denver</li>
+                        <li>Atlanta</li>
+                        <li>Austin</li>
+                        <li>Chicago-O'Hare</li>
+                        <li>Cincinnati</li>
+                        <li>Cleveland</li>
+                        <li>Las Vegas</li>
+                        <li>Miami</li>
+                        <li>Orlando</li>
+                        <li>Philadelphia</li>
+                        <li>Raleigh/Durham</li>
+                        <li>San Antonio</li>
+                        <li>Trenton</li>
+                    </ul>
+                </td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Hawaiian_Airlines" target="_blank">Hawaiian Airlines</a></td>
+                <td><a href="https://www.hawaiianairlines.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Airbus_A330-200_Hawaiian_AL_%28HAL%29_F-WWKR_-_MSN_1217_-_Named_Hanaiakamalama_-_Will_be_N383HA_%285843118846%29.jpg/100px-Airbus_A330-200_Hawaiian_AL_%28HAL%29_F-WWKR_-_MSN_1217_-_Named_Hanaiakamalama_-_Will_be_N383HA_%285843118846%29.jpg" alt="Hawaiian Airlines"></a></td>
+                <td>HA</td>
+                <td>HAL</td>
+                <td>HAWAIIAN</td>
+                <td>
+                    <ul>
+                        <li>Honolulu</li>
+                        <li>Kahului</li>
+                        <li>Kailua-Kona</li>
+                        <li>Lihue</li>
+                    </ul>
+                </td>
+                <td>1929</td>
+                <td>
+                    <p>
+                        Founded as Inter-Island Airways in early 1929 and commenced operations in late 1929 as Hawaiian Airlines
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/JetBlue_Airways" target="_blank">JetBlue Airways</a></td>
+                <td><a href="https://www.jetblue.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/JetBlue_Airways%2C_N903JB%2C_Airbus_A321-231_%2819561503063%29.jpg/100px-JetBlue_Airways%2C_N903JB%2C_Airbus_A321-231_%2819561503063%29.jpg" alt="JetBlue Airways"></a></td>
+                <td>B6</td>
+                <td>JBU</td>
+                <td>JETBLUE</td>
+                <td>
+                    <ul>
+                        <li>New York-JFK</li>
+                        <li>Boston</li>
+                        <li>Fort Lauderdale</li>
+                        <li>Long Beach</li>
+                        <li>Orlando</li>
+                        <li>San Juan</li>
+                    </ul>
+                </td>
+                <td>1998</td>
+                <td>
+                    <p>
+                        Founded as New Air and commenced operations in 2000 as JetBlue Airways.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Southwest_Airlines" target="_blank">Southwest Airlines</a></td>
+                <td><a href="https://www.southwest.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Southwest_Airlines%2C_Boeing_737-73V%28WL%29%2C_N559WN_-_LAX_%2822585519706%29.jpg/100px-Southwest_Airlines%2C_Boeing_737-73V%28WL%29%2C_N559WN_-_LAX_%2822585519706%29.jpg" alt="Southwest Airlines"></a></td>
+                <td>WN</td>
+                <td>SWA</td>
+                <td>SOUTHWEST</td>
+                <td>
+                    <ul>
+                        <li>Dallas-Love</li>
+                        <li>Atlanta</li>
+                        <li>Baltimore</li>
+                        <li>Chicago-Midway</li>
+                        <li>Denver</li>
+                        <li>Houston-Hobby</li>
+                        <li>Las Vegas</li>
+                        <li>Oakland</li>
+                        <li>Orlando</li>
+                        <li>Phoenix-Sky Harbor</li>
+                        <li>Austin</li>
+                        <li>Fort Lauderdale</li>
+                        <li>Los Angeles</li>
+                        <li>Nashville</li>
+                        <li>Sacramento</li>
+                        <li>San Diego</li>
+                        <li>San Jose (CA)</li>
+                        <li>St. Louis</li>
+                        <li>Tampa</li>
+                    </ul>
+                </td>
+                <td>1967</td>
+                <td>
+                    <p>
+                        Founded as Air Southwest and commenced operations in 1971 as Southwest Airlines.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Spirit_Airlines" target="_blank">Spirit Airlines</a></td>
+                <td><a href="https://www.spirit.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Spirit_Airlines_Airbus_A321-231%28WL%29_N658NK.jpg/100px-Spirit_Airlines_Airbus_A321-231%28WL%29_N658NK.jpg" alt="Spirit Airlines"></a></td>
+                <td>NK</td>
+                <td>NKS</td>
+                <td>SPIRIT WINGS</td>
+                <td>
+                    <ul>
+                        <li>Fort Lauderdale</li>
+                        <li>Detroit</li>
+                        <li>Las Vegas</li>
+                        <li>Atlantic City</li>
+                        <li>Chicago-O'Hare</li>
+                        <li>Dallas/Fort Worth</li>
+                    </ul>
+                </td>
+                <td>1980</td>
+                <td>
+                    <p>
+                        Founded as Charter One.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Sun_Country_Airlines" target="_blank">Sun Country Airlines</a></td>
+                <td><a href="https://www.suncountry.com/booking/search.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Sun_Country_Airlines_Boeing_737-800_LDS.jpg/100px-Sun_Country_Airlines_Boeing_737-800_LDS.jpg" alt="Sun Country Airlines"></a></td>
+                <td>SY</td>
+                <td>SCX</td>
+                <td>SUN COUNTRY</td>
+                <td>
+                    <ul>
+                        <li>Minneapolis/St. Paul</li>
+                        <li>Dallas/Fort Worth</li>
+                    </ul>
+                </td>
+                <td>1982</td>
+                <td>
+                    <p>
+                        Commenced operations in 1983.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td height="233"><a href="https://en.wikipedia.org/wiki/United_Airlines" target="_blank">United Airlines</a></td>
+                <td><a href="https://www.united.com/ual/en/us/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/N787UA_-_United_Airlines_-_Boeing_777-222%28ER%29_-_PVG_%2813889266106%29.jpg/100px-N787UA_-_United_Airlines_-_Boeing_777-222%28ER%29_-_PVG_%2813889266106%29.jpg" alt="American Airlines"></a></td>
+                <td>UA</td>
+                <td>UAL</td>
+                <td>UNITED</td>
+                <td>
+                    <ul>
+                        <li>Chicago-O'Hare</li>
+                        <li>Denver</li>
+                        <li>Guam</li>
+                        <li>Houston-Intercontinental</li>
+                        <li>Los Angeles</li>
+                        <li>Newark</li>
+                        <li>San Francisco</li>
+                        <li>Washington-Dulles</li>
+                        <li>Cleveland</li>
+                    </ul>
+                </td>
+                <td>1926</td>
+                <td>
+                    <p>
+                        Founded as Varney Air Lines and commenced operations in 1931 as United Air Lines.
+                    </p>
+                </td>
+          </tr>
+        </table>&nbsp;</td>
+          </tr>
+	      <tr>
+	        <td align="center" bgcolor="#2C7E00"><a href="index.html">Home</a> | <a href="aboutme.html">About Me</a> | <a href="usairlines.html">US Airlines</a> | <a href="animals.html">Animals</a> | <a href="logos.html">Logos</a> | <a href="games.html">Games</a> | <a href="bodysystems.html">Body Systems</a> | <a href="usstates.html">US States</a> | <a href="mybike.html">My Bike</a> | <a href="philadelphiaeagles.html">Philadelphia Eagles</a> | <a href="cityofphiladelphia.html">City of Philadelphia</a><a href="imagemap.html">Image Map</a> | <a href="bikes.html">Bikes</a> | <a href="climatechange.html">Climate Change</a> | <a href="globalwarming.html">Global Warming</a> | <a href="earth.html">Earth</a> | <a href="universe.html">Universe</a> | <a href="forms.html">Forms</a></td>
+        </tr>
+	      <tr>
+	        <td bgcolor="#2C7E00"><a href="mailto: tug81042@temple.edu">Contact the web host</a></td>
+          </tr>
+        </tbody>
+      </table>
+	</div>
+</body>
+</html>

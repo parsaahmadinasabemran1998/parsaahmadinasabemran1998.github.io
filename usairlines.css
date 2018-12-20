@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#usairlines-wrapper {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 960px;
+    min-height: 100%;
+    color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+a:link {
+	color: #10F902;
+}
+
+a:visited {
+	color: #FEFF00;
+}
+
+a:hover {
+	color: #FE9100;
+	text-decoration: none;
+}
+a:active {
+	color: #7298F7;
+}
+
+table {
+	background-color: #2C7E00;
+}
+
+table tr td {
+    color: #FFFFFF;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-style: oblique;
+    font-weight: 100;
+    font-size: 100%;
+    position: static;
+}

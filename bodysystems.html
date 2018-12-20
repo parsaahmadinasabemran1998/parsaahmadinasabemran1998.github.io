@@ -1,0 +1,526 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Body Systems</title>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #04AAC6;
+}
+a:active {
+    text-decoration: none;
+}
+</style>
+<link href="bodysystems.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#FFFFFF" link="#FAF901" vlink="#F3B637" alink="#516BE7" onLoad="MM_preloadImages('rollover navigation/home 2.gif','rollover navigation/aboutme 2.gif','rollover navigation/usairlines 2.gif','rollover navigation/animals 2.gif','rollover navigation/logos 2.gif','rollover navigation/games 2.gif','rollover navigation/bodysystems 2.gif','rollover navigation/usstates 2.gif','rollover navigation/mybike 2.gif','rollover navigation/philadelphiaeagles 2.gif','rollover navigation/cityofphiladelphia 2.gif','rollover navigation/imagemap 2.gif','rollover navigation/bikes 2.gif','rollover navigation/climatechange 2.gif','rollover navigation/globalwarming 2.gif','rollover navigation/earth 2.gif','rollover navigation/universe 2.gif','rollover navigation/forms 2.gif')">
+	<div align="center" id="bodysystems-wrapper" style="">
+	  <table width="75%" border="0" cellspacing="0" cellpadding="0">
+	    <td bgcolor="#660267"><tbody>
+	      <td bgcolor="#660267"><tr>
+	        <td height="18"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tbody>
+	            <tr>
+	              <td bgcolor="#43004C"><table border="0" width="200" cellspacing="0" cellpadding="3">
+<form name="where">
+  <tr>
+    <td width="100%">
+<select name="city" size="1" onchange="updateclock(this);"> 
+<option value="" selected>Local time</option>
+<option value="0">London GMT</option> 
+<option value="1">Rome</option>
+<option value="7">Bangkok</option>
+<option value="8">Hong Kong</option>
+<option value="9">Tokyo</option> 
+<option value="10">Sydney</option>
+<option value="12">Fiji</option>
+<option value="-10">Hawaii</option>
+<option value="-8">San Francisco</option> 
+<option value="-5">New York</option>
+<option value="-3">Buenos Aires</option>
+</select>
+
+</td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="JavaScript">
+	
+if (document.all||document.getElementById)
+document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br />')
+
+zone=0;
+isitlocal=true;
+ampm='';
+
+function updateclock(z){
+zone=z.options[z.selectedIndex].value;
+isitlocal=(z.options[0].selected)?true:false;
+}
+
+function WorldClock(){
+now=new Date();
+ofst=now.getTimezoneOffset()/60;
+secs=now.getSeconds();
+sec=-1.57+Math.PI*secs/30;
+mins=now.getMinutes();
+min=-1.57+Math.PI*mins/30;
+hr=(isitlocal)?now.getHours():(now.getHours() + parseInt(ofst)) + parseInt(zone);
+hrs=-1.575+Math.PI*hr/6+Math.PI*parseInt(now.getMinutes())/360;
+if (hr < 0) hr+=24;
+if (hr > 23) hr-=24;
+ampm = (hr > 11)?"PM":"AM";
+statusampm = ampm.toLowerCase();
+
+hr2 = hr;
+if (hr2 == 0) hr2=12;
+(hr2 < 13)?hr2:hr2 %= 12;
+if (hr2<10) hr2="0"+hr2
+
+var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
+
+if (document.all)
+worldclock.innerHTML=finaltime
+else if (document.getElementById)
+document.getElementById("worldclock").innerHTML=finaltime
+else if (document.layers){
+document.worldclockns.document.worldclockns2.document.write(finaltime)
+document.worldclockns.document.worldclockns2.document.close()
+}
+
+
+setTimeout('WorldClock()',1000);
+}
+
+window.onload=WorldClock
+//-->
+</script>
+</td>
+</form>
+  </tr>
+</table> <SCRIPT LANGUAGE=Javascript>
+
+ calendar = new Date();
+ day = calendar.getDay();
+ month = calendar.getMonth();
+ date = calendar.getDate();
+ year = calendar.getYear();
+ if (year < 1000)
+ year+=1900
+ cent = parseInt(year/100);
+ g = year % 19;
+ k = parseInt((cent - 17)/25);
+ i = (cent - parseInt(cent/4) - parseInt((cent - k)/3) + 19*g + 15) % 30;
+ i = i - parseInt(i/28)*(1 - parseInt(i/28)*parseInt(29/(i+1))*parseInt((21-g)/11));
+ j = (year + parseInt(year/4) + i + 2 - cent + parseInt(cent/4)) % 7;
+ l = i - j;
+ emonth = 3 + parseInt((l + 40)/44);
+ edate = l + 28 - 31*parseInt((emonth/4));
+ emonth--;
+ var dayname = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+ var monthname = 
+ new Array ("January","February","March","April","May","June","July","August","September","October","November","December" );
+ document.write("");
+ document.write(dayname[day] + ", ");
+ document.write(monthname[month] + " ");
+ if (date< 10) document.write("0" + date + ", ");
+         else document.write(date + ", ");
+ document.write(year + "    ");
+ // Easter
+ if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+ // January
+ if ((month == 0) && (date == 1)) document.write("New Year's Day");
+ if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+ if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+ if ((month == 0) && (day == 1) && (date > 14) && (date< 22)) document.write("Martin Luther King's Birthday");
+ // February
+ if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+ if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+ if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+ if ((month == 1) && (date== 12)) document.write("Lincoln's Birthday");
+ if((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+ if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+ if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+ if ((month == 1) && (date == 29)) document.write("Leap Day");
+ // March
+ if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+ if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+ if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+ // April
+ if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+ if ((month == 3) && (date == 8)) document.write("Buddha born");
+ if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+ if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+ if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+ if ((month == 3) && (date == 22)) document.write("Earth Day");
+ if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+ if ((month == 3) && (day == 0) && (date > 0) && (date< 8)) document.write("Daylight Savings Time Begins");
+ // May
+ if ((month == 4) && (date == 1)) document.write("May Day,   Boy's Day (Japan)");
+ if ((month == 4) && (date == 2)) document.write("Constitution Day (Japan)");
+ if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico),   Children's Day (Japan)");
+ if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+ if ((month == 4) && (day == 0) && (date > 7) && (date< 16)) document.write("Mother's Day");
+ if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+ // June
+ if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+ if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+ if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+ if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+ if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+ if((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+ if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+ if ((month == 5) && (day == 0) && (date > 15) && (date< 24)) document.write("Father's Day");
+ // July
+ if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+ if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+ if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+ // August
+ if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+ if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+ if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+ // September
+ if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+ if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+ if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+ if ((month == 8) && (day== 1)&& (date > 0) && (date< 8)) document.write("Labor Day (USA)");
+ // October
+ if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+ if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+ if ((month == 9) && (day == 1) && (date > 7) && (date< 16)) document.write("Columbus Day (USA)");
+ if ((month == 9) && (day == 0) && (date > 24) && (date< 31)) document.write("Daylight Savings Time Ends");
+ if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+ if ((month == 9) && (date == 24)) document.write("United Nations Day");
+ if ((month == 9) && (date == 31)) document.write("Halloween");
+ // November
+ if ((month == 10) && (date == 1)) document.write("All Saints Day");
+ if ((month == 10) && (date == 2)) document.write("All Souls Day");
+ if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+ if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+ if ((month == 10) && (date ==20)) document.write("Revolution Day (Mexico)");
+ if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+ if ((month == 10) && (day == 4) && (date > 23) && (date< 30)) document.write("Thanksgiving (USA)");
+ if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+ // December
+ if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+ if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+ if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+ if ((month == 11) && (date == 25)) document.write("Christmas");
+ if ((month == 11) && (date == 26)) document.write("Boxing Day");
+ if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+ document.write("<br />");
+//-->
+ </SCRIPT> 
+
+&nbsp;</td>
+              </tr>
+	            <tr>
+	              <td bgcolor="#43004C">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+	      <tr>
+	        <td align="center" bgcolor="#43004C"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','rollover navigation/home 2.gif',1)"><img src="rollover navigation/home 1.gif" alt="" width="100" height="27" id="Home"></a><a href="aboutme.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About Me','','rollover navigation/aboutme 2.gif',1)"><img src="rollover navigation/aboutme 1.gif" alt="" width="100" height="27" id="About Me"></a><a href="usairlines.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US Airlines','','rollover navigation/usairlines 2.gif',1)"><img src="rollover navigation/usairlines 1.gif" alt="" width="100" height="27" id="US Airlines"></a><a href="animals.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Animals','','rollover navigation/animals 2.gif',1)"><img src="rollover navigation/animals 1.gif" alt="" width="100" height="27" id="Animals"></a><a href="logos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logos','','rollover navigation/logos 2.gif',1)"><img src="rollover navigation/logos 1.gif" alt="" width="100" height="27" id="Logos"></a><a href="games.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Games','','rollover navigation/games 2.gif',1)"><img src="rollover navigation/games 1.gif" alt="" width="100" height="27" id="Games"></a><a href="bodysystems.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Body Systems','','rollover navigation/bodysystems 2.gif',1)"><img src="rollover navigation/bodysystems 1.gif" alt="" width="100" height="27" id="Body Systems"></a><a href="usstates.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US States','','rollover navigation/usstates 2.gif',1)"><img src="rollover navigation/usstates 1.gif" alt="" width="100" height="27" id="US States"></a><a href="mybike.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('My Bike','','rollover navigation/mybike 2.gif',1)"><img src="rollover navigation/mybike 1.gif" alt="" width="100" height="27" id="My Bike"></a><a href="philadelphiaeagles.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Philadelphia Eagles','','rollover navigation/philadelphiaeagles 2.gif',1)"><img src="rollover navigation/philadelphiaeagles 1.gif" alt="" width="100" height="27" id="Philadelphia Eagles"></a><a href="cityofphiladelphia.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('City of Philadelphia','','rollover navigation/cityofphiladelphia 2.gif',1)"><img src="rollover navigation/cityofphiladelphia 1.gif" alt="" width="100" height="27" id="City of Philadelphia"></a><a href="imagemap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image Map','','rollover navigation/imagemap 2.gif',1)"><img src="rollover navigation/imagemap 1.gif" alt="" width="100" height="27" id="Image Map"></a><a href="bikes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Bikes','','rollover navigation/bikes 2.gif',1)"><img src="rollover navigation/bikes 1.gif" alt="" width="100" height="27" id="Bikes"></a><a href="climatechange.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Climate Change','','rollover navigation/climatechange 2.gif',1)"><img src="rollover navigation/climatechange 1.gif" alt="" width="100" height="27" id="Climate Change"></a><a href="globalwarming.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Global Warming','','rollover navigation/globalwarming 2.gif',1)"><img src="rollover navigation/globalwarming 1.gif" alt="" width="100" height="27" id="Global Warming"></a><a href="earth.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Earth','','rollover navigation/earth 2.gif',1)"><img src="rollover navigation/earth 1.gif" alt="" width="100" height="27" id="Earth"></a><a href="universe.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Universe','','rollover navigation/universe 2.gif',1)"><img src="rollover navigation/universe 1.gif" alt="" width="100" height="27" id="Universe"></a><a href="forms.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Forms','','rollover navigation/forms 2.gif',1)"><img src="rollover navigation/forms 1.gif" alt="" width="100" height="27" id="Forms"></a></td>
+          </tr>
+	      <tr>
+	        <td height="518" valign="top" bgcolor="#43004C"><h1>List of Body Systems</h1>
+    <table>
+        <tr>
+            <td>Name (External link to a  inner body webpage with more info)</td>
+            <td>Image (External link to livescience webpage with ore info)</td>
+            <td>Functions</td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/anatomy/integumentary" target="_blank">Integumentary System</a></td>
+            <td><a href="https://www.livescience.com/27115-skin-facts-diseases-conditions.html" target="_blank"><img src="https://i.pinimg.com/originals/e5/49/be/e549be7049883afc9aa4c2fd42a80117.png" alt="Integumentary System" Width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            Its main function is to act as a barrier to protect the body from the outside world.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            It also functions to retain body fluids, protect against disease, eliminate waste products, and regulate body temperature.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/musfov.html" target="_blank">Muscular System</a></td>
+            <td><a href="https://www.livescience.com/26854-muscular-system-facts-functions-diseases.html" target="_blank"><img src="https://www.teachstarter.com/wp-content/uploads/2016/07/HumanBodyResources_MuscularSysteml_Poster-300x424.jpg" alt="Muscular System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The main function of the muscular system is movement.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Muscles are the only tissue in the body that has the ability to contract and therefore move the other parts of the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Related to the function of movement is the muscular system's second function: the maintenance of posture and body position.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/skelfov.html" target="_blank">Skeletal System</a></td>
+            <td><a href="https://www.livescience.com/22537-skeletal-system.html" target="_blank"><img src="https://sites.google.com/a/st.cabarrus.k12.nc.us/2nd-period-group-7-tennis/_/rsrc/1421853831741/skeletal-system/Skeletal_System.gif" alt="Skeletal System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The adult human skeletal system consists of 206 bones, as well as a network of tendons, ligaments and cartilage that connects them.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The skeletal system performs vital functions — support, movement, protection, blood cell production, calcium storage and endocrine regulation — that enable us to survive.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/nervov.html" target="_blank">Nervous System</a></td>
+            <td><img src="http://www.kurzweilai.net/images/Peripheral-nervous-system.jpg" alt="Related image" width="150"/></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The nervous system consists of the brain, spinal cord, sensory organs, and all of the nerves that connect these organs with the rest of the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Together, these organs are responsible for the control of the body and communication among its parts.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/cardov.html" target="_blank">Circulatory System/Cardiovascular System</a></td>
+            <td><a href="https://www.livescience.com/22486-circulatory-system.html" target="_blank"><img src="https://biologydictionary.net/wp-content/uploads/2017/03/Circulatory-system-diagram.jpg" alt="Circulatory System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The human circulatory system functions to transport blood and oxygen from the lungs to the various tissues of the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The heart pumps the blood throughout the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The lymphatic system is an extension of the human circulatory system that includes cell-mediated and antibody-mediated immune systems.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/lympov.html" target="_blank">Lymphatic System</a></td>
+            <td><a href="https://www.livescience.com/26983-lymphatic-system.html" target="_blank"><img src="https://irp-cdn.multiscreensite.com/5bbc292b/dms3rep/multi/desktop/LymphaticSystem_Female-1600x1600.png" alt="Skeletal System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>The primary function of the lymphatic system is to transport lymph, a fluid containing infection-fighting white blood cells, throughout the body.    </p>
+                    </li>
+                    <li>
+                        <p>
+                            The lymphatic system primarily consists of lymphatic vessels, which are similar to the circulatory system's veins and capillaries.
+                        </p>
+                    </li>
+                </ul>
+            </td>    
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/anatomy/respiratory" target="_blank">Respiratory System</a></td>
+            <td><a href="https://www.livescience.com/22616-respiratory-system.html" target="_blank"><img src="https://previews.123rf.com/images/alila/alila1211/alila121100019/16481969-the-respiratory-system-labeled.jpg" alt="Respiratory System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The function of the human respiratory system is to transport air into the lungs and to facilitate the diffusion of Oxygen into the blood stream.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            It also receives waste Carbon Dioxide from the blood and exhales it.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/endoov.html">Endocrine System</a></td>
+            <td><img src="http://www.medicalestudy.com/wp-content/uploads/2016/03/image001.jpg" alt="Related image" width="150"/></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            he endocrine system is made up of glands that produce and secrete hormones, chemical substances produced in the body that regulate the activity of cells or organs.
+                        </p>
+                    </li>
+                    <li>
+                        <p>These hormones regulate the body's growth, metabolism (the physical and chemical processes of the body), and sexual development and function.</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/urinov.html">Urinary System</a></td>
+            <td><a href="https://www.livescience.com/27012-urinary-system.html" target="_blank"><img src="https://detiina.com/wp-content/uploads/2018/06/pics-of-urinary-system-urinary-system-anatomy-and-physiology-anatomy-medical-and-school.png" alt="Urinary System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            Their function is to remove liquid waste from the blood in the form of urine; keep a stable balance of salts and other substances in the blood; and produce erythropoietin, a hormone that aids the formation of red blood cells.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The kidneys remove urea from the blood through tiny filtering units called nephrons.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/repmov.html" target="_blank">Male Reproductive System</a></td>
+            <td><a href="https://www.livescience.com/26741-reproductive-system.html" target="_blank"><img src="https://thumbs.dreamstime.com/z/male-reproductive-system-25100569.jpg" alt="Male Reproductive System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            These external structures include the penis, the scrotum, and the testicles.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The organs of the male reproductive system are specialized for the following functions: to produce, maintain and transport sperm (the male reproductive cells) and protective fluid (semen) to discharge sperm within the female reproductive tract.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/repfov.html" target="_blank">Female Reproductive System</a></td>
+            <td><a href="https://www.livescience.com/26741-reproductive-system.html" target="_blank"><img src="https://previews.123rf.com/images/vecton/vecton1706/vecton170600197/80714975-education-chart-of-biology-for-female-reproductive-system-diagram.jpg" alt="Female Reproductive System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The female reproductive system provides several functions.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The ovaries produce the female egg cells, called the ova or oocytes.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The oocytes are then transported to the fallopian tube where fertilization by a sperm may occur.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/digeov.html" target="_blank">Digestive System</a></td>
+            <td><a href="https://www.livescience.com/22367-digestive-system.html" target="_blank"><img src="https://d1e4pidl3fu268.cloudfront.net/d3b7019a-84f4-40d7-957e-efdc8eac9767/Blausen_0316_DigestiveSystem.crop_606x454_0,1.preview.png" alt="Digestive System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The function of the digestive system is digestion and absorption.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Digestion is the breakdown of food into small molecules, which are then absorbed into the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The digestive system is divided into two major parts: The digestive tract (alimentary canal) is a continuous tube with two openings: the mouth and the anus.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.innerbody.com/image/lympov.html" target="_blank">Immune System</a></td>
+            <td><a href="https://www.livescience.com/26579-immune-system.html" target="_blank"><img src="https://www.ncbi.nlm.nih.gov/projects/pmh/PMH_Authoring/media/Images/originals/Immunsystem_Uebersicht_EN.jpg" alt="Immune System" width="150"></a></td>
+            <td>
+                <ul>
+                    <li>
+                        <p>
+                            The immune system is made up of a network of cells, tissues, and organs that work together to protect the body.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            One of the important cells involved are white blood cells, also called leukocytes, which come in two basic types that combine to seek out and destroy disease-causing organisms or substances.
+                        </p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>&nbsp;</td>
+          </tr>
+	      <tr>
+	        <td align="center" bgcolor="#43004C"><a href="index.html">Home</a> | <a href="aboutme.html">About Me</a> | <a href="usairlines.html">US Airlines</a> | <a href="animals.html">Animals</a> | <a href="logos.html">Logos</a> | <a href="games.html">Games</a> | <a href="bodysystems.html">Body Systems</a> | <a href="usstates.html">US States</a> | <a href="mybike.html">My Bike</a> | <a href="philadelphiaeagles.html">Philadelphia Eagles</a> | <a href="cityofphiladelphia.html">City of Philadelphia</a><a href="imagemap.html">Image Map</a> | <a href="bikes.html">Bikes</a> | <a href="climatechange.html">Climate Change</a> | <a href="globalwarming.html">Global Warming</a> | <a href="earth.html">Earth</a> | <a href="universe.html">Universe</a> | <a href="forms.html">Forms</a></td>
+        </tr>
+	      <tr>
+	        <td bgcolor="#43004C"><a href="mailto: tug81042@temple.edu">Contact the web host</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</body>
+</html>

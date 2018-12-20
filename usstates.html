@@ -1,0 +1,998 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>US States</title>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #5E0060;
+}
+a:active {
+    text-decoration: none;
+}
+</style>
+<link href="usstates.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body,td,th {
+    color: #FFFFFF;
+}
+body {
+    background-color: #FFFFFF;
+}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#FFFFFF" link="#00FE08" vlink="#A5D0FD" alink="#061BFF" onLoad="MM_preloadImages('rollover navigation/home 2.gif','rollover navigation/aboutme 2.gif','rollover navigation/usairlines 2.gif','rollover navigation/animals 2.gif','rollover navigation/logos 2.gif','rollover navigation/games 2.gif','rollover navigation/bodysystems 2.gif','rollover navigation/usstates 2.gif','rollover navigation/mybike 2.gif','rollover navigation/philadelphiaeagles 2.gif','rollover navigation/cityofphiladelphia 2.gif','rollover navigation/imagemap 2.gif','rollover navigation/bikes 2.gif','rollover navigation/climatechange 2.gif','rollover navigation/globalwarming 2.gif','rollover navigation/earth 2.gif','rollover navigation/universe 2.gif','rollover navigation/forms 2.gif')">
+<div> </div>
+	<div align="center" id="usstates-wrapper">
+	  <table width="75%" border="0" align="center" cellpadding="0" cellspacing="0">
+	    <tbody>
+	      <tr>
+	        <td height="18"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tbody>
+	            <tr>
+	              <td><table border="0" width="200" cellspacing="0" cellpadding="3">
+<form name="where">
+  <tr>
+    <td width="100%">
+<select name="city" size="1" onchange="updateclock(this);"> 
+<option value="" selected>Local time</option>
+<option value="0">London GMT</option> 
+<option value="1">Rome</option>
+<option value="7">Bangkok</option>
+<option value="8">Hong Kong</option>
+<option value="9">Tokyo</option> 
+<option value="10">Sydney</option>
+<option value="12">Fiji</option>
+<option value="-10">Hawaii</option>
+<option value="-8">San Francisco</option> 
+<option value="-5">New York</option>
+<option value="-3">Buenos Aires</option>
+</select>
+
+</td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="JavaScript">
+	
+if (document.all||document.getElementById)
+document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br />')
+
+zone=0;
+isitlocal=true;
+ampm='';
+
+function updateclock(z){
+zone=z.options[z.selectedIndex].value;
+isitlocal=(z.options[0].selected)?true:false;
+}
+
+function WorldClock(){
+now=new Date();
+ofst=now.getTimezoneOffset()/60;
+secs=now.getSeconds();
+sec=-1.57+Math.PI*secs/30;
+mins=now.getMinutes();
+min=-1.57+Math.PI*mins/30;
+hr=(isitlocal)?now.getHours():(now.getHours() + parseInt(ofst)) + parseInt(zone);
+hrs=-1.575+Math.PI*hr/6+Math.PI*parseInt(now.getMinutes())/360;
+if (hr < 0) hr+=24;
+if (hr > 23) hr-=24;
+ampm = (hr > 11)?"PM":"AM";
+statusampm = ampm.toLowerCase();
+
+hr2 = hr;
+if (hr2 == 0) hr2=12;
+(hr2 < 13)?hr2:hr2 %= 12;
+if (hr2<10) hr2="0"+hr2
+
+var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
+
+if (document.all)
+worldclock.innerHTML=finaltime
+else if (document.getElementById)
+document.getElementById("worldclock").innerHTML=finaltime
+else if (document.layers){
+document.worldclockns.document.worldclockns2.document.write(finaltime)
+document.worldclockns.document.worldclockns2.document.close()
+}
+
+
+setTimeout('WorldClock()',1000);
+}
+
+window.onload=WorldClock
+//-->
+</script>
+</td>
+</form>
+  </tr>
+</table> <SCRIPT LANGUAGE=Javascript>
+
+ calendar = new Date();
+ day = calendar.getDay();
+ month = calendar.getMonth();
+ date = calendar.getDate();
+ year = calendar.getYear();
+ if (year < 1000)
+ year+=1900
+ cent = parseInt(year/100);
+ g = year % 19;
+ k = parseInt((cent - 17)/25);
+ i = (cent - parseInt(cent/4) - parseInt((cent - k)/3) + 19*g + 15) % 30;
+ i = i - parseInt(i/28)*(1 - parseInt(i/28)*parseInt(29/(i+1))*parseInt((21-g)/11));
+ j = (year + parseInt(year/4) + i + 2 - cent + parseInt(cent/4)) % 7;
+ l = i - j;
+ emonth = 3 + parseInt((l + 40)/44);
+ edate = l + 28 - 31*parseInt((emonth/4));
+ emonth--;
+ var dayname = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+ var monthname = 
+ new Array ("January","February","March","April","May","June","July","August","September","October","November","December" );
+ document.write("");
+ document.write(dayname[day] + ", ");
+ document.write(monthname[month] + " ");
+ if (date< 10) document.write("0" + date + ", ");
+         else document.write(date + ", ");
+ document.write(year + "    ");
+ // Easter
+ if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+ // January
+ if ((month == 0) && (date == 1)) document.write("New Year's Day");
+ if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+ if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+ if ((month == 0) && (day == 1) && (date > 14) && (date< 22)) document.write("Martin Luther King's Birthday");
+ // February
+ if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+ if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+ if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+ if ((month == 1) && (date== 12)) document.write("Lincoln's Birthday");
+ if((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+ if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+ if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+ if ((month == 1) && (date == 29)) document.write("Leap Day");
+ // March
+ if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+ if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+ if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+ // April
+ if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+ if ((month == 3) && (date == 8)) document.write("Buddha born");
+ if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+ if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+ if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+ if ((month == 3) && (date == 22)) document.write("Earth Day");
+ if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+ if ((month == 3) && (day == 0) && (date > 0) && (date< 8)) document.write("Daylight Savings Time Begins");
+ // May
+ if ((month == 4) && (date == 1)) document.write("May Day,   Boy's Day (Japan)");
+ if ((month == 4) && (date == 2)) document.write("Constitution Day (Japan)");
+ if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico),   Children's Day (Japan)");
+ if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+ if ((month == 4) && (day == 0) && (date > 7) && (date< 16)) document.write("Mother's Day");
+ if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+ // June
+ if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+ if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+ if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+ if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+ if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+ if((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+ if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+ if ((month == 5) && (day == 0) && (date > 15) && (date< 24)) document.write("Father's Day");
+ // July
+ if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+ if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+ if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+ // August
+ if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+ if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+ if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+ // September
+ if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+ if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+ if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+ if ((month == 8) && (day== 1)&& (date > 0) && (date< 8)) document.write("Labor Day (USA)");
+ // October
+ if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+ if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+ if ((month == 9) && (day == 1) && (date > 7) && (date< 16)) document.write("Columbus Day (USA)");
+ if ((month == 9) && (day == 0) && (date > 24) && (date< 31)) document.write("Daylight Savings Time Ends");
+ if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+ if ((month == 9) && (date == 24)) document.write("United Nations Day");
+ if ((month == 9) && (date == 31)) document.write("Halloween");
+ // November
+ if ((month == 10) && (date == 1)) document.write("All Saints Day");
+ if ((month == 10) && (date == 2)) document.write("All Souls Day");
+ if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+ if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+ if ((month == 10) && (date ==20)) document.write("Revolution Day (Mexico)");
+ if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+ if ((month == 10) && (day == 4) && (date > 23) && (date< 30)) document.write("Thanksgiving (USA)");
+ if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+ // December
+ if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+ if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+ if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+ if ((month == 11) && (date == 25)) document.write("Christmas");
+ if ((month == 11) && (date == 26)) document.write("Boxing Day");
+ if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+ document.write("<br />");
+//-->
+ </SCRIPT> 
+
+&nbsp;</td>
+              </tr>
+	            <tr>
+	              <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+	      <tr>
+	        <td align="center"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','rollover navigation/home 2.gif',1)"><img src="rollover navigation/home 1.gif" alt="" width="100" height="27" id="Home"></a><a href="aboutme.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About Me','','rollover navigation/aboutme 2.gif',1)"><img src="rollover navigation/aboutme 1.gif" alt="" width="100" height="27" id="About Me"></a><a href="usairlines.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US Airlines','','rollover navigation/usairlines 2.gif',1)"><img src="rollover navigation/usairlines 1.gif" alt="" width="100" height="27" id="US Airlines"></a><a href="animals.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Animals','','rollover navigation/animals 2.gif',1)"><img src="rollover navigation/animals 1.gif" alt="" width="100" height="27" id="Animals"></a><a href="logos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logos','','rollover navigation/logos 2.gif',1)"><img src="rollover navigation/logos 1.gif" alt="" width="100" height="27" id="Logos"></a><a href="games.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Games','','rollover navigation/games 2.gif',1)"><img src="rollover navigation/games 1.gif" alt="" width="100" height="27" id="Games"></a><a href="bodysystems.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Body Systems','','rollover navigation/bodysystems 2.gif',1)"><img src="rollover navigation/bodysystems 1.gif" alt="" width="100" height="27" id="Body Systems"></a><a href="usstates.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US States','','rollover navigation/usstates 2.gif',1)"><img src="rollover navigation/usstates 1.gif" alt="" width="100" height="27" id="US States"></a><a href="mybike.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('My Bike','','rollover navigation/mybike 2.gif',1)"><img src="rollover navigation/mybike 1.gif" alt="" width="100" height="27" id="My Bike"></a><a href="philadelphiaeagles.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Philadelphia Eagles','','rollover navigation/philadelphiaeagles 2.gif',1)"><img src="rollover navigation/philadelphiaeagles 1.gif" alt="" width="100" height="27" id="Philadelphia Eagles"></a><a href="cityofphiladelphia.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('City of Philadelphia','','rollover navigation/cityofphiladelphia 2.gif',1)"><img src="rollover navigation/cityofphiladelphia 1.gif" alt="" width="100" height="27" id="City of Philadelphia"></a><a href="imagemap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image Map','','rollover navigation/imagemap 2.gif',1)"><img src="rollover navigation/imagemap 1.gif" alt="" width="100" height="27" id="Image Map"></a><a href="bikes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Bikes','','rollover navigation/bikes 2.gif',1)"><img src="rollover navigation/bikes 1.gif" alt="" width="100" height="27" id="Bikes"></a><a href="climatechange.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Climate Change','','rollover navigation/climatechange 2.gif',1)"><img src="rollover navigation/climatechange 1.gif" alt="" width="100" height="27" id="Climate Change"></a><a href="globalwarming.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Global Warming','','rollover navigation/globalwarming 2.gif',1)"><img src="rollover navigation/globalwarming 1.gif" alt="" width="100" height="27" id="Global Warming"></a><a href="earth.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Earth','','rollover navigation/earth 2.gif',1)"><img src="rollover navigation/earth 1.gif" alt="" width="100" height="27" id="Earth"></a><a href="universe.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Universe','','rollover navigation/universe 2.gif',1)"><img src="rollover navigation/universe 1.gif" alt="" width="100" height="27" id="Universe"></a><a href="forms.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Forms','','rollover navigation/forms 2.gif',1)"><img src="rollover navigation/forms 1.gif" alt="" width="100" height="27" id="Forms"></a></td>
+          </tr>
+	      <tr>
+	        <td height="518" valign="top"><h1>Table of list of US States followed by a map of USA</h1>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td>Flags (External link to a webpage with more info)</td>
+                    <td>Name</td>
+                    <td>Abbreviation</td>
+                    <td>Became a State</td>
+                    <td><p>Statehood</p></td>
+                    <td>Capital</td>
+                    <td>Capital since</td>
+                    <td>Area (mi2)</td>
+                    <td>Municipal Population (2010)</td>
+                    <td>Metropolitan Population (2010)</td>
+                    <td>Rank Population (2010)</td>
+                    <td>Notes</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Alabama" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Alabama.svg/150px-Flag_of_Alabama.svg.png" alt="Flag of Alabama(February 16, 1895)[3]"/></a></td>
+                    <td>Alabama</td>
+                    <td>AL</td>
+                    <td>December 14, 1819</td>
+                    <td>1819</td>
+                    <td>Montgomery</td>
+                    <td>1846</td>
+                    <td>155.4</td>
+                    <td>205,764<br></td>
+                    <td>374,536</td>
+                    <td>2</td>
+                    <td>Birmingham is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Alaska"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Alaska.svg/143px-Flag_of_Alaska.svg.png" alt="Flag of Alaska (July 6, 1927)"/></a></td>
+                    <td>Alaska</td>
+                    <td>AK</td>
+                    <td>January 3, 1959</td>
+                    <td>1959</td>
+                    <td>Juneau</td>
+                    <td>1906</td>
+                    <td>2716.7</td>
+                    <td>31,275</td>
+                    <td>&nbsp;</td>
+                    <td>3</td>
+                    <td>Largest capital by municipal land area. Anchorage is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Arizona"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Arizona.svg/150px-Flag_of_Arizona.svg.png" alt="Flag of Arizona (January 25, 1917)"/></a></td>
+                    <td>Arizona</td>
+                    <td>AZ</td>
+                    <td>February 14, 1912</td>
+                    <td>1912</td>
+                    <td>Phoenix</td>
+                    <td>1889</td>
+                    <td>474.9</td>
+                    <td>1,445,632</td>
+                    <td>4,192,887</td>
+                    <td>1</td>
+                    <td>Most populous U.S. state capital and the only capital with more than 1 million citizens.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Arkansas" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Arkansas.svg/150px-Flag_of_Arkansas.svg.png" alt="Flag of Arkansas (March 16, 1924)"/></a></td>
+                    <td>Arkansas</td>
+                    <td>AR</td>
+                    <td>June 15, 1836</td>
+                    <td>1836</td>
+                    <td>Little Rock</td>
+                    <td>1821</td>
+                    <td>116.2</td>
+                    <td>193,524</td>
+                    <td>877,091</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/California" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/150px-Flag_of_California.svg.png" alt="Flag of California (February 3, 1911)"/></a></td>
+                    <td>California</td>
+                    <td>CA</td>
+                    <td>September 9, 1850</td>
+                    <td>1850</td>
+                    <td>Sacramento</td>
+                    <td>1854</td>
+                    <td>97.2</td>
+                    <td>466,488</td>
+                    <td>2,527,123</td>
+                    <td>6</td>
+                    <td>Supreme Court of California is headquartered in San Francisco. The state's largest city is Los Angeles.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Colorado" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colorado_designed_by_Andrew_Carlisle_Carson.svg/150px-Flag_of_Colorado_designed_by_Andrew_Carlisle_Carson.svg.png" alt="Flag of Colorado (March 31, 1964)"/></a></td>
+                    <td>Colorado</td>
+                    <td>CO</td>
+                    <td>August 1, 1876</td>
+                    <td>1876</td>
+                    <td>Denver</td>
+                    <td>1867</td>
+                    <td>153.4</td>
+                    <td>600,158</td>
+                    <td>2,552,195</td>
+                    <td>1</td>
+                    <td>Denver was called Denver City until 1882.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Connecticut" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_Connecticut.svg/130px-Flag_of_Connecticut.svg.png" alt="Flag of Connecticut (September 9, 1897)"/></a></td>
+                    <td>Connecticut</td>
+                    <td>CT</td>
+                    <td>January 9, 1788</td>
+                    <td>1788</td>
+                    <td>Hartford</td>
+                    <td>1875</td>
+                    <td>17.3</td>
+                    <td>124,775</td>
+                    <td>1,212,381</td>
+                    <td>3</td>
+                    <td>Bridgeport is the state's largest city, Hartford, however, is the state's largest Metro area</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Delaware" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Flag_of_Delaware.svg/150px-Flag_of_Delaware.svg.png" alt="Flag of Delaware (July 24, 1913)"/></a></td>
+                    <td>Delaware</td>
+                    <td>DE</td>
+                    <td>December 7, 1787</td>
+                    <td>1787</td>
+                    <td>Dover</td>
+                    <td>1777</td>
+                    <td>22.4</td>
+                    <td>36,047</td>
+                    <td>162,310</td>
+                    <td>2</td>
+                    <td>Longest-serving capital in terms of statehood. Wilmington is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Florida" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Florida.svg/150px-Flag_of_Florida.svg.png" alt="Flag of Florida(May 21, 1985)"/></a></td>
+                    <td>Florida</td>
+                    <td>FL</td>
+                    <td>March 3, 1845</td>
+                    <td>1845</td>
+                    <td>Tallahassee</td>
+                    <td>1824</td>
+                    <td>95.7</td>
+                    <td>181,412</td>
+                    <td>367,413</td>
+                    <td>7</td>
+                    <td>Jacksonville is the largest city. Miami is the largest metropolitan area.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Georgia_(U.S._state)" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Georgia_%28U.S._state%29.svg/160px-Flag_of_Georgia_%28U.S._state%29.svg.png" alt="Flag of Georgia (February 19, 2003)"/></a></td>
+                    <td>Georgia</td>
+                    <td>GA</td>
+                    <td>January 2, 1788</td>
+                    <td>1788</td>
+                    <td>Atlanta</td>
+                    <td>1868</td>
+                    <td>131.7</td>
+                    <td>420,003</td>
+                    <td>5,268,860</td>
+                    <td>1</td>
+                    <td>State capital with the most populous metro area in the U.S.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Hawaii" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Hawaii.svg/200px-Flag_of_Hawaii.svg.png" alt="Flag of Hawaii (December 29, 1845)"/></a></td>
+                    <td>Hawaii</td>
+                    <td>HI</td>
+                    <td>August 21, 1959</td>
+                    <td>1959</td>
+                    <td>Honolulu</td>
+                    <td>1845</td>
+                    <td>85.7</td>
+                    <td>337,256</td>
+                    <td>953,207</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Idaho" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Idaho.svg/127px-Flag_of_Idaho.svg.png" alt="Flag of Idaho (November 2, 1957)"/></a></td>
+                    <td>Idaho</td>
+                    <td>ID</td>
+                    <td>July 3, 1890</td>
+                    <td>1890</td>
+                    <td>Boise</td>
+                    <td>1865</td>
+                    <td>63.8</td>
+                    <td>205,671</td>
+                    <td>616,561</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Illinois" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Illinois.svg/167px-Flag_of_Illinois.svg.png" alt="Flag of Illinois (June 27, 1969)"/></a></td>
+                    <td>Illinois</td>
+                    <td>IL</td>
+                    <td>December 3, 1818</td>
+                    <td>1818</td>
+                    <td>Springfield</td>
+                    <td>1837</td>
+                    <td>54.0</td>
+                    <td>116,250</td>
+                    <td>208,182</td>
+                    <td>6</td>
+                    <td>Chicago is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Indiana" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_Indiana.svg/150px-Flag_of_Indiana.svg.png" alt="Flag of Indiana (May 31, 1917)"/></a></td>
+                    <td>Indiana</td>
+                    <td>IN</td>
+                    <td>December 11, 1816</td>
+                    <td>1816</td>
+                    <td>Indianapolis</td>
+                    <td>1825</td>
+                    <td>361.5</td>
+                    <td>829,718</td>
+                    <td>1,756,221</td>
+                    <td>1</td>
+                    <td>The University of Notre Dame is in South Bend, Indiana.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Iowa" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Iowa.svg/146px-Flag_of_Iowa.svg.png" alt="Flag of Iowa (March 12, 1921)"/></a></td>
+                    <td>Iowa</td>
+                    <td>IA</td>
+                    <td>December 28, 1846</td>
+                    <td>1846</td>
+                    <td>Des Moines</td>
+                    <td>1857</td>
+                    <td>75.8</td>
+                    <td>203,433</td>
+                    <td>580,255</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Kansas" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Kansas.svg/167px-Flag_of_Kansas.svg.png" alt="Flag of Kansas (September 22, 1961)"/></a></td>
+                    <td>Kansas</td>
+                    <td>KS</td>
+                    <td>January 29, 1861</td>
+                    <td>1861</td>
+                    <td>Topeka</td>
+                    <td>1856</td>
+                    <td>56.0</td>
+                    <td>127,473</td>
+                    <td>230,824</td>
+                    <td>4</td>
+                    <td>Wichita is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Kentucky" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_Kentucky.svg/190px-Flag_of_Kentucky.svg.png" alt="Flag of Kentucky (March 26, 1918)"/></a></td>
+                    <td>Kentucky</td>
+                    <td>KY</td>
+                    <td>June 1, 1792</td>
+                    <td>1792</td>
+                    <td>Frankfort</td>
+                    <td>1792</td>
+                    <td>14.7</td>
+                    <td>25,527</td>
+                    <td>70,758</td>
+                    <td>14</td>
+                    <td>Louisville is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Louisiana" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Flag_of_Louisiana.svg/157px-Flag_of_Louisiana.svg.png" alt="Flag of Louisiana (November 22, 2010)[4]"/></a></td>
+                    <td>Louisiana</td>
+                    <td>LA</td>
+                    <td>April 30, 1812</td>
+                    <td>1812</td>
+                    <td>Baton Rouge</td>
+                    <td>1880</td>
+                    <td>76.8</td>
+                    <td>229,553</td>
+                    <td>802,484</td>
+                    <td>2</td>
+                    <td>New Orleans is the state's largest city and home to the Louisiana Supreme Court, although Baton Rouge is located in the state's most populous parish. It is also home to the tallest state capitol building.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Maine" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Maine.svg/150px-Flag_of_Maine.svg.png" alt="Flag of Maine (June 16, 1909)"/></a></td>
+                    <td>Maine</td>
+                    <td>ME</td>
+                    <td>March 15, 1820</td>
+                    <td>1820</td>
+                    <td>Augusta</td>
+                    <td>1832</td>
+                    <td>55.4</td>
+                    <td>19,136</td>
+                    <td>117,114</td>
+                    <td>8</td>
+                    <td>Portland is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Maryland" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Maryland.svg/150px-Flag_of_Maryland.svg.png" alt="Flag of Maryland (November 25, 1904)"/></a></td>
+                    <td>Maryland</td>
+                    <td>MD</td>
+                    <td>April 28, 1788</td>
+                    <td>1788</td>
+                    <td>Annapolis</td>
+                    <td>1694</td>
+                    <td>6.73</td>
+                    <td>38,394</td>
+                    <td>&nbsp;</td>
+                    <td>7</td>
+                    <td>Smallest capital by land area. Baltimore is the state's largest city and county. Capitol building is the oldest in the U.S. still in use.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Massachusetts" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Massachusetts.svg/167px-Flag_of_Massachusetts.svg.png" alt="Flag of Massachusetts (March 21, 1971)"/></a></td>
+                    <td>Massachusetts</td>
+                    <td>MA</td>
+                    <td>February 6, 1788</td>
+                    <td>1788</td>
+                    <td>Boston</td>
+                    <td>1630</td>
+                    <td>48.4</td>
+                    <td>617,594</td>
+                    <td>4,522,858</td>
+                    <td>1</td>
+                    <td>Longest continuously serving capital in the U.S.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Michigan" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Flag_of_Michigan.svg/150px-Flag_of_Michigan.svg.png" alt="Flag of Michigan (June 26, 1911)"/></a></td>
+                    <td>Michigan</td>
+                    <td>MI</td>
+                    <td>January 26, 1837</td>
+                    <td>1837</td>
+                    <td>Lansing</td>
+                    <td>1847</td>
+                    <td>35.0</td>
+                    <td>114,297</td>
+                    <td>464,036</td>
+                    <td>5</td>
+                    <td>Only state capital that is not also its county seat (not counting the two state capitals that are independent cities and not located in any county). Detroit is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Minnesota"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Minnesota.svg/158px-Flag_of_Minnesota.svg.png" alt="Flag of Minnesota (August 2, 1983)"/></a></td>
+                    <td>Minnesota</td>
+                    <td>MN</td>
+                    <td>May 11, 1858</td>
+                    <td>1858</td>
+                    <td>Saint Paul</td>
+                    <td>1849</td>
+                    <td>52.8</td>
+                    <td>300,851</td>
+                    <td>3,502,891</td>
+                    <td>2</td>
+                    <td>Capital's twin city, Minneapolis, is the state's largest. The two form the core of the state's Largest Metro Area.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Mississippi" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Mississippi.svg/150px-Flag_of_Mississippi.svg.png" alt="Flag of Mississippi (April 23, 1894, and February 7, 2001; see notes)[5]"/></a></td>
+                    <td>Mississippi</td>
+                    <td>MS</td>
+                    <td>December 10, 1817</td>
+                    <td>1817</td>
+                    <td>Jackson</td>
+                    <td>1821</td>
+                    <td>104.9</td>
+                    <td>173,514</td>
+                    <td>539,057</td>
+                    <td>1</td>
+                    <td>Only state capital that shares its status as county seat with another city (Raymond, Mississippi).</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Missouri" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Missouri.svg/172px-Flag_of_Missouri.svg.png" alt="Flag of Missouri (September 4, 1913)"/></a></td>
+                    <td>Missouri</td>
+                    <td>MO</td>
+                    <td>August 10, 1821</td>
+                    <td>1821</td>
+                    <td>Jefferson City</td>
+                    <td>1826</td>
+                    <td>27.3</td>
+                    <td>43,079</td>
+                    <td>149,807</td>
+                    <td>15</td>
+                    <td>Kansas City is the state's largest city, and Greater St. Louis is the state's largest metropolitan area.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Montana" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_Montana.svg/150px-Flag_of_Montana.svg.png" alt="Flag of Montana (December 17, 1981)"/></a></td>
+                    <td>Montana</td>
+                    <td>MT</td>
+                    <td>November 8, 1889</td>
+                    <td>1889</td>
+                    <td>Helena</td>
+                    <td>1875</td>
+                    <td>14.0</td>
+                    <td>28,190</td>
+                    <td>74,801</td>
+                    <td>6</td>
+                    <td>Billings is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Nebraska" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flag_of_Nebraska.svg/167px-Flag_of_Nebraska.svg.png" alt="Flag of Nebraska (July 16, 1963)"/></a></td>
+                    <td>Nebraska</td>
+                    <td>NE</td>
+                    <td>March 1, 1867</td>
+                    <td>1867</td>
+                    <td>Lincoln</td>
+                    <td>1867</td>
+                    <td>74.6</td>
+                    <td>258,379</td>
+                    <td>302,157</td>
+                    <td>2</td>
+                    <td>Omaha is the state's largest city. It shares the largest metro area with Council Bluffs, Iowa.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Nevada" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Flag_of_Nevada.svg/150px-Flag_of_Nevada.svg.png" alt="Flag of Nevada (July 25, 1991)"/></a></td>
+                    <td>Nevada</td>
+                    <td>NV</td>
+                    <td>October 31, 1864</td>
+                    <td>1864</td>
+                    <td>Carson City</td>
+                    <td>1861</td>
+                    <td>143.4</td>
+                    <td>55,274</td>
+                    <td>&nbsp;</td>
+                    <td>6</td>
+                    <td>One of two independent cities that serves as a state capital. Las Vegas is the state's largest city. It shares the largest metro area with Paradise.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/New_Hampshire" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Flag_of_New_Hampshire.svg/150px-Flag_of_New_Hampshire.svg.png" alt="Flag of New Hampshire (November 30, 1931)"/></a></td>
+                    <td>New Hampshire</td>
+                    <td>NH</td>
+                    <td>June 21, 1788</td>
+                    <td>1788</td>
+                    <td>Concord</td>
+                    <td>1808</td>
+                    <td>64.3</td>
+                    <td>42,695</td>
+                    <td>&nbsp;</td>
+                    <td>3</td>
+                    <td>Manchester is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/New_Jersey" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_New_Jersey.svg/167px-Flag_of_New_Jersey.svg.png" alt="Flag of New Jersey (January 15, 1896)"/></a></td>
+                    <td>New Jersey</td>
+                    <td>NJ</td>
+                    <td>December 18, 1787</td>
+                    <td>1787</td>
+                    <td>Trenton</td>
+                    <td>1784</td>
+                    <td>7.66</td>
+                    <td>84,913</td>
+                    <td>366,513</td>
+                    <td>10</td>
+                    <td>Served as the U.S. capital for a short period in the late 18th century. Newark is the state's largest city, although Trenton is the center of the largest Metropolitan Statistical Area centered in New Jersey.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/New_Mexico" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_New_Mexico.svg/150px-Flag_of_New_Mexico.svg.png" alt="Flag of New Mexico (September 18, 1920)"/></a></td>
+                    <td>New Mexico</td>
+                    <td>NM</td>
+                    <td>January 6, 1912</td>
+                    <td>1912</td>
+                    <td>Santa Fe</td>
+                    <td>1610</td>
+                    <td>37.3</td>
+                    <td>75,764</td>
+                    <td>183,732</td>
+                    <td>4</td>
+                    <td>Longest serving capital in the United States. Highest elevation of any state capital. Albuquerque is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/New_York_(state)" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_New_York.svg/200px-Flag_of_New_York.svg.png" alt="Flag of New York (April 1, 1901)"/></a></td>
+                    <td>New York</td>
+                    <td>NY</td>
+                    <td>July 26, 1788</td>
+                    <td>1788</td>
+                    <td>Albany</td>
+                    <td>1797</td>
+                    <td>21.4</td>
+                    <td>97,856</td>
+                    <td>857,592</td>
+                    <td>6</td>
+                    <td>New York City is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/North_Carolina" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Flag_of_North_Carolina.svg/150px-Flag_of_North_Carolina.svg.png" alt="Flag of North Carolina (June 24, 1991)[6]"/></a></td>
+                    <td>North Carolina</td>
+                    <td>NC</td>
+                    <td>November 21, 1789</td>
+                    <td>1789</td>
+                    <td>Raleigh</td>
+                    <td>1792</td>
+                    <td>114.6</td>
+                    <td>403,892</td>
+                    <td>1,130,490</td>
+                    <td>2</td>
+                    <td>Charlotte is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/North_Dakota" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Flag_of_North_Dakota.svg/128px-Flag_of_North_Dakota.svg.png" alt="Flag of North Dakota (November 9, 1943)"/></a></td>
+                    <td>North Dakota</td>
+                    <td>ND</td>
+                    <td>November 2, 1889</td>
+                    <td>1889</td>
+                    <td>Bismarck</td>
+                    <td>1883</td>
+                    <td>26.9</td>
+                    <td>61,272</td>
+                    <td>108,779</td>
+                    <td>2</td>
+                    <td>Fargo is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Ohio" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Ohio.svg/163px-Flag_of_Ohio.svg.png" alt="Flag of Ohio (May 9, 1902)"/></a></td>
+                    <td>Ohio</td>
+                    <td>OH</td>
+                    <td>March 1, 1803</td>
+                    <td>1803</td>
+                    <td>Columbus</td>
+                    <td>1816</td>
+                    <td>210.3</td>
+                    <td>822,553</td>
+                    <td>1,967,066</td>
+                    <td>1</td>
+                    <td>Third-largest state capital; however, the Cincinnati and Cleveland metropolitan areas are both slightly larger.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Oklahoma" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flag_of_Oklahoma.svg/150px-Flag_of_Oklahoma.svg.png" alt="Flag of Oklahoma (1941; November 1, 2006)[7][8]"/></a></td>
+                    <td>Oklahoma</td>
+                    <td>OK</td>
+                    <td>November 16, 1907</td>
+                    <td>1907</td>
+                    <td>Oklahoma City</td>
+                    <td>1910</td>
+                    <td>607.0</td>
+                    <td>580,000</td>
+                    <td>1,252,987</td>
+                    <td>1</td>
+                    <td>Shortest serving current state capital.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Oregon" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Oregon.svg/167px-Flag_of_Oregon.svg.png" alt="Flag of Oregon (obverse) (April 15, 1925)[9]"/></a></td>
+                    <td>Oregon</td>
+                    <td>OR</td>
+                    <td>February 14, 1859</td>
+                    <td>1859</td>
+                    <td>Salem</td>
+                    <td>1855</td>
+                    <td>45.7</td>
+                    <td>154,637</td>
+                    <td>390,738</td>
+                    <td>3</td>
+                    <td>Portland is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Pennsylvania"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Pennsylvania.svg/150px-Flag_of_Pennsylvania.svg.png" alt="Flag of Pennsylvania (April 24, 1907)"/></a></td>
+                    <td>Pennsylvania</td>
+                    <td>PA</td>
+                    <td>December 12, 1787</td>
+                    <td>1787</td>
+                    <td>Harrisburg</td>
+                    <td>1812</td>
+                    <td>8.11</td>
+                    <td>49,528</td>
+                    <td>647,390</td>
+                    <td>9</td>
+                    <td>Philadelphia is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Rhode_Island" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Rhode_Island.svg/109px-Flag_of_Rhode_Island.svg.png" alt="Flag of Rhode Island (July 27, 1640, formally November 1, 1897)"/></a></td>
+                    <td>Rhode Island</td>
+                    <td>RI</td>
+                    <td>May 19, 1790</td>
+                    <td>1790</td>
+                    <td>Providence</td>
+                    <td>1900</td>
+                    <td>18.5</td>
+                    <td>178,042</td>
+                    <td>1,630,956</td>
+                    <td>1</td>
+                    <td>Also served as the state's capital from 1636–1686 and 1689–1776. It was one of five co-capitals 1776–1853, and one of two co-capitals 1853–1900.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/South_Carolina" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Flag_of_South_Carolina.svg/150px-Flag_of_South_Carolina.svg.png" alt="Flag of South Carolina (September 28, 1861)"/></a></td>
+                    <td>South Carolina</td>
+                    <td>SC</td>
+                    <td>May 23, 1788</td>
+                    <td>1788</td>
+                    <td>Columbia</td>
+                    <td>1786</td>
+                    <td>125.2</td>
+                    <td>131,686</td>
+                    <td>913,797</td>
+                    <td>2</td>
+                    <td>Charleston is the state's largest city, while Greenville is the Largest Metro area.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/South_Dakota" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_South_Dakota.svg/160px-Flag_of_South_Dakota.svg.png" alt="Flag of South Dakota (November 9, 1992)"/></a></td>
+                    <td>South Dakota</td>
+                    <td>SD</td>
+                    <td>November 2, 1889</td>
+                    <td>1889</td>
+                    <td>Pierre</td>
+                    <td>1889</td>
+                    <td>13.0</td>
+                    <td>13,646</td>
+                    <td>&nbsp;</td>
+                    <td>8</td>
+                    <td>Sioux Falls is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Tennessee" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Tennessee.svg/167px-Flag_of_Tennessee.svg.png" alt="Flag of Tennessee (February 3, 1905)"/></a></td>
+                    <td>Tennessee</td>
+                    <td>TN</td>
+                    <td>June 1, 1796</td>
+                    <td>1796</td>
+                    <td>Nashville</td>
+                    <td>1826</td>
+                    <td>473.3</td>
+                    <td>635,710</td>
+                    <td>1,582,264</td>
+                    <td>1</td>
+                    <td>Nashville is the state's largest city, overtaking Memphis in 2016.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Texas" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/150px-Flag_of_Texas.svg.png" alt="Flag of Texas (January 25, 1839)"/></a></td>
+                    <td>Texas</td>
+                    <td>TX</td>
+                    <td>December 29, 1845</td>
+                    <td>1845</td>
+                    <td>Austin</td>
+                    <td>1839</td>
+                    <td>251.5</td>
+                    <td>790,390</td>
+                    <td>1,716,291</td>
+                    <td>4</td>
+                    <td>Houston is the state's largest city and the previous capital, and Dallas–Fort Worth is the largest metro area. Austin is the largest state capital that is not also the state's largest city by population.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Utah" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Utah_%282011-present%29.svg/167px-Flag_of_Utah_%282011-present%29.svg.png" alt="Flag of Utah (February 16, 2011)[10][11][12][13]"/></a></td>
+                    <td>Utah</td>
+                    <td>UT</td>
+                    <td>January 4, 1896</td>
+                    <td>1896</td>
+                    <td>Salt Lake City</td>
+                    <td>1858</td>
+                    <td>109.1</td>
+                    <td>186,440</td>
+                    <td>1,124,197</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Vermont" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Vermont.svg/167px-Flag_of_Vermont.svg.png" alt="Flag of Vermont (April 17, 1923)"/></a></td>
+                    <td>Vermont</td>
+                    <td>VT</td>
+                    <td>March 4, 1791</td>
+                    <td>1791</td>
+                    <td>Montpelier</td>
+                    <td>1805</td>
+                    <td>10.2</td>
+                    <td>7,855</td>
+                    <td>&nbsp;</td>
+                    <td>6</td>
+                    <td>Least populous U.S. state capital. Burlington is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Virginia" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/146px-Flag_of_Virginia.svg.png" alt="Flag of Virginia (February 1, 1950)[14]"/></a></td>
+                    <td>Virginia</td>
+                    <td>VA</td>
+                    <td>June 25, 1788</td>
+                    <td>1788</td>
+                    <td>Richmond</td>
+                    <td>1780</td>
+                    <td>60.1</td>
+                    <td>204,214</td>
+                    <td>1,231,675</td>
+                    <td>4</td>
+                    <td>Virginia Beach and Norfolk are the state's largest cities, and Hampton Roads is the state's largest metro area based in the state. Richmond is one of two independent cities that serves as a state capital. Although Richmond is the county seat of Henrico County, it is not part of the county.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Washington_(state)" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Washington.svg/168px-Flag_of_Washington.svg.png" alt="Flag of Washington[15] (March 5, 1923)"/></a></td>
+                    <td>Washington</td>
+                    <td>WA</td>
+                    <td>November 11, 1889</td>
+                    <td>1889</td>
+                    <td>Olympia</td>
+                    <td>1853</td>
+                    <td>16.7</td>
+                    <td>46,478</td>
+                    <td>234,670</td>
+                    <td>24</td>
+                    <td>Seattle is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/West_Virginia"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Flag_of_West_Virginia.svg/190px-Flag_of_West_Virginia.svg.png" alt="Flag of West Virginia (November 6, 1929)"/></a></td>
+                    <td>West Virginia</td>
+                    <td>WV</td>
+                    <td>June 20, 1863</td>
+                    <td>1863</td>
+                    <td>Charleston</td>
+                    <td>1885</td>
+                    <td>31.6</td>
+                    <td>51,400</td>
+                    <td>304,214</td>
+                    <td>1</td>
+                    <td>Charleston is the smallest capital city that is still the most populous city in its state. Huntington has the largest metropolitan area.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Wisconsin" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Flag_of_Wisconsin.svg/150px-Flag_of_Wisconsin.svg.png" alt="Flag of Wisconsin (May 1, 1981)[16]"/></a></td>
+                    <td>Wisconsin</td>
+                    <td>WI</td>
+                    <td>May 29, 1848</td>
+                    <td>1848</td>
+                    <td>Madison</td>
+                    <td>1838</td>
+                    <td>68.7</td>
+                    <td>233,209</td>
+                    <td>561,505</td>
+                    <td>2</td>
+                    <td>Milwaukee is the state's largest city.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://en.wikipedia.org/wiki/Wyoming" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Wyoming.svg/143px-Flag_of_Wyoming.svg.png" alt="Flag of Wyoming (March 4, 1917)"/></a></td>
+                    <td>Wyoming</td>
+                    <td>WY</td>
+                    <td>July 10, 1890</td>
+                    <td>1890</td>
+                    <td>Cheyenne</td>
+                    <td>1869</td>
+                    <td>21.1</td>
+                    <td>59,466</td>
+                    <td>91,738</td>
+                    <td>1</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Map_of_USA_with_state_names.svg/800px-Map_of_USA_with_state_names.svg.png" alt="Map of USA with state names.svg" width="1021"/></p>
+            <p>&nbsp;</p></td>
+          </tr>
+	      <tr>
+	        <td align="center"><a href="index.html">Home</a> | <a href="aboutme.html">About Me</a> | <a href="usairlines.html">US Airlines</a> | <a href="animals.html">Animals</a> | <a href="logos.html">Logos</a> | <a href="games.html">Games</a> | <a href="bodysystems.html">Body Systems</a> | <a href="usstates.html">US States</a> | <a href="mybike.html">My Bike</a> | <a href="philadelphiaeagles.html">Philadelphia Eagles</a> | <a href="cityofphiladelphia.html">City of Philadelphia</a><a href="imagemap.html">Image Map</a> | <a href="bikes.html">Bikes</a> | <a href="climatechange.html">Climate Change</a> | <a href="globalwarming.html">Global Warming</a> | <a href="earth.html">Earth</a> | <a href="universe.html">Universe</a> | <a href="forms.html">Forms</a></td>
+        </tr>
+	      <tr>
+	        <td><a href="mailto: tug81042@temple.edu">Contact the web host</a></td>
+          </tr>
+        </tbody>
+      </table>
+	</div>
+</body>
+</html>
