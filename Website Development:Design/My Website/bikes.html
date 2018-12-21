@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bikes</title>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #03FF00;
+}
+a:hover {
+    text-decoration: none;
+    color: #37003E;
+}
+a:active {
+    text-decoration: none;
+}
+</style>
+<link href="bikes.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#D50000" text="#E5ABF3" link="#FCEE00" vlink="#03FF00" alink="#753800" onLoad="MM_preloadImages('rollover navigation/home 2.gif','rollover navigation/aboutme 2.gif','rollover navigation/usairlines 2.gif','rollover navigation/animals 2.gif','rollover navigation/logos 2.gif','rollover navigation/games 2.gif','rollover navigation/bodysystems 2.gif','rollover navigation/usstates 2.gif','rollover navigation/mybike 2.gif','rollover navigation/philadelphiaeagles 2.gif','rollover navigation/cityofphiladelphia 2.gif','rollover navigation/imagemap 2.gif','rollover navigation/bikes 2.gif','rollover navigation/climatechange 2.gif','rollover navigation/globalwarming 2.gif','rollover navigation/earth 2.gif','rollover navigation/universe 2.gif','rollover navigation/forms 2.gif')">
+	<div align="center" id="bikes-wrapper">
+	  <table width="75%" border="0" cellspacing="0" cellpadding="0">
+	    <tbody>
+	      <tr>
+	        <td height="18"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tbody>
+	            <tr>
+	              <td><table border="0" width="200" cellspacing="0" cellpadding="3">
+<form name="where">
+  <tr>
+    <td width="100%">
+<select name="city" size="1" onchange="updateclock(this);"> 
+<option value="" selected>Local time</option>
+<option value="0">London GMT</option> 
+<option value="1">Rome</option>
+<option value="7">Bangkok</option>
+<option value="8">Hong Kong</option>
+<option value="9">Tokyo</option> 
+<option value="10">Sydney</option>
+<option value="12">Fiji</option>
+<option value="-10">Hawaii</option>
+<option value="-8">San Francisco</option> 
+<option value="-5">New York</option>
+<option value="-3">Buenos Aires</option>
+</select>
+
+</td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="JavaScript">
+	
+if (document.all||document.getElementById)
+document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br />')
+
+zone=0;
+isitlocal=true;
+ampm='';
+
+function updateclock(z){
+zone=z.options[z.selectedIndex].value;
+isitlocal=(z.options[0].selected)?true:false;
+}
+
+function WorldClock(){
+now=new Date();
+ofst=now.getTimezoneOffset()/60;
+secs=now.getSeconds();
+sec=-1.57+Math.PI*secs/30;
+mins=now.getMinutes();
+min=-1.57+Math.PI*mins/30;
+hr=(isitlocal)?now.getHours():(now.getHours() + parseInt(ofst)) + parseInt(zone);
+hrs=-1.575+Math.PI*hr/6+Math.PI*parseInt(now.getMinutes())/360;
+if (hr < 0) hr+=24;
+if (hr > 23) hr-=24;
+ampm = (hr > 11)?"PM":"AM";
+statusampm = ampm.toLowerCase();
+
+hr2 = hr;
+if (hr2 == 0) hr2=12;
+(hr2 < 13)?hr2:hr2 %= 12;
+if (hr2<10) hr2="0"+hr2
+
+var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
+
+if (document.all)
+worldclock.innerHTML=finaltime
+else if (document.getElementById)
+document.getElementById("worldclock").innerHTML=finaltime
+else if (document.layers){
+document.worldclockns.document.worldclockns2.document.write(finaltime)
+document.worldclockns.document.worldclockns2.document.close()
+}
+
+
+setTimeout('WorldClock()',1000);
+}
+
+window.onload=WorldClock
+//-->
+</script>
+</td>
+</form>
+  </tr>
+</table> <SCRIPT LANGUAGE=Javascript>
+
+ calendar = new Date();
+ day = calendar.getDay();
+ month = calendar.getMonth();
+ date = calendar.getDate();
+ year = calendar.getYear();
+ if (year < 1000)
+ year+=1900
+ cent = parseInt(year/100);
+ g = year % 19;
+ k = parseInt((cent - 17)/25);
+ i = (cent - parseInt(cent/4) - parseInt((cent - k)/3) + 19*g + 15) % 30;
+ i = i - parseInt(i/28)*(1 - parseInt(i/28)*parseInt(29/(i+1))*parseInt((21-g)/11));
+ j = (year + parseInt(year/4) + i + 2 - cent + parseInt(cent/4)) % 7;
+ l = i - j;
+ emonth = 3 + parseInt((l + 40)/44);
+ edate = l + 28 - 31*parseInt((emonth/4));
+ emonth--;
+ var dayname = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+ var monthname = 
+ new Array ("January","February","March","April","May","June","July","August","September","October","November","December" );
+ document.write("");
+ document.write(dayname[day] + ", ");
+ document.write(monthname[month] + " ");
+ if (date< 10) document.write("0" + date + ", ");
+         else document.write(date + ", ");
+ document.write(year + "    ");
+ // Easter
+ if ((month == emonth) && (date == edate)) document.write("Easter Sunday (Western)   ");
+ // January
+ if ((month == 0) && (date == 1)) document.write("New Year's Day");
+ if ((month == 0) && (date == 15)) document.write("Adults Day (Japan)");
+ if ((month == 0) && (date == 27)) document.write("Wolfgang Amadeus Mozart born (1756)");
+ if ((month == 0) && (day == 1) && (date > 14) && (date< 22)) document.write("Martin Luther King's Birthday");
+ // February
+ if ((month == 1) && (date == 2)) document.write("Groundhog Day");
+ if ((month == 1) && (date == 8)) document.write("Jules Verne born (1828)");
+ if ((month == 1) && (date == 11)) document.write("National Foundation Day (Japan)");
+ if ((month == 1) && (date== 12)) document.write("Lincoln's Birthday");
+ if((month == 1) && (date == 14)) document.write("St. Valentine's Day");
+ if ((month == 1) && (date == 15)) document.write("Galileo Galilei born (1564)");
+ if ((month == 1) && (date == 22)) document.write("Washington's Birthday");
+ if ((month == 1) && (date == 29)) document.write("Leap Day");
+ // March
+ if ((month == 2) && (date == 3)) document.write("Girl's Day (Japan)");
+ if ((month == 2) && (date == 17)) document.write("St. Patrick's Day");
+ if ((month == 2) && (date == 21)) document.write("J.S. Bach born (1685)");
+ // April
+ if ((month == 3) && (date == 1)) document.write("April Fools' Day");
+ if ((month == 3) && (date == 8)) document.write("Buddha born");
+ if ((month == 3) && (date == 15) && (day != 0)) document.write("Income Tax Day (USA),   ");
+ if ((month == 3) && (date == 16) && (day == 1)) document.write("Income Tax Day (USA) ");
+ if ((month == 3) && (date == 15)) document.write("Leonardo da Vinci born (1452)");
+ if ((month == 3) && (date == 22)) document.write("Earth Day");
+ if ((month == 3) && (date == 29)) document.write("Emperor's Birthday (Japan)");
+ if ((month == 3) && (day == 0) && (date > 0) && (date< 8)) document.write("Daylight Savings Time Begins");
+ // May
+ if ((month == 4) && (date == 1)) document.write("May Day,   Boy's Day (Japan)");
+ if ((month == 4) && (date == 2)) document.write("Constitution Day (Japan)");
+ if ((month == 4) && (date == 5)) document.write("Cinco de Mayo (Mexico),   Children's Day (Japan)");
+ if ((month == 4) && (date == 14)) document.write("Independence Day (Paraguay)");
+ if ((month == 4) && (day == 0) && (date > 7) && (date< 16)) document.write("Mother's Day");
+ if ((month == 4) && (day == 1) && (date > 24)) document.write("Memorial Day");
+ // June
+ if ((month == 5) && (date == 5)) document.write("Constitution Day (Denmark)");
+ if ((month == 5) && (date == 6)) document.write("D-Day (USA)");
+ if ((month == 5) && (date == 11)) document.write("Kamehameha (Hawaii)");
+ if ((month == 5) && (date == 14)) document.write("FlagDay (USA)");
+ if ((month == 5) && (date == 21)) document.write("Summer Solstice");
+ if((month == 5) && (date == 24)) document.write("St. Jean Baptiste Day (Canada)");
+ if ((month == 5) && (date == 30)) document.write("Independence Day (Zaire)");
+ if ((month == 5) && (day == 0) && (date > 15) && (date< 24)) document.write("Father's Day");
+ // July
+ if ((month == 6) && (date == 1)) document.write("Independence Day (Canada)");
+ if ((month == 6) && (date == 4)) document.write("Independence Day (USA)");
+ if ((month == 6) && (date == 14)) document.write("Bastille Day (France)");
+ // August
+ if ((month == 7) && (date == 1)) document.write("Confederation Day (Switzerland)");
+ if ((month == 7) && (date == 10)) document.write("Independence Day (Ecuador)");
+ if ((month == 7) && (date == 15)) document.write("Independence Day (India)");
+ // September
+ if ((month == 8) && (date == 7)) document.write("Independence Day (Brazil)");
+ if ((month == 8) && (date == 15)) document.write("Respect for the Aged Day (Japan)");
+ if ((month == 8) && (date == 16)) document.write("Independence Day (Mexico)");
+ if ((month == 8) && (day== 1)&& (date > 0) && (date< 8)) document.write("Labor Day (USA)");
+ // October
+ if ((month == 9) && (date == 1)) document.write("German Reunufication (1990)");
+ if ((month == 9) && (date == 10)) document.write("Health-Sports Day (Japan)");
+ if ((month == 9) && (day == 1) && (date > 7) && (date< 16)) document.write("Columbus Day (USA)");
+ if ((month == 9) && (day == 0) && (date > 24) && (date< 31)) document.write("Daylight Savings Time Ends");
+ if ((month == 9) && (day == 0) && (date == 31)) document.write("Daylight Savings Time Ends<BR>");
+ if ((month == 9) && (date == 24)) document.write("United Nations Day");
+ if ((month == 9) && (date == 31)) document.write("Halloween");
+ // November
+ if ((month == 10) && (date == 1)) document.write("All Saints Day");
+ if ((month == 10) && (date == 2)) document.write("All Souls Day");
+ if ((month == 10) && (date == 3)) document.write("Culture Day (Japan)");
+ if ((month == 10) && (date == 11)) document.write("Veteran's Day (USA),    Remembrance Day (Canada)");
+ if ((month == 10) && (date ==20)) document.write("Revolution Day (Mexico)");
+ if ((month == 10) && (date == 23)) document.write("Labor Thanksgiving Day (Japan)");
+ if ((month == 10) && (day == 4) && (date > 23) && (date< 30)) document.write("Thanksgiving (USA)");
+ if ((month == 10) && (date == 30) && (day == 4)) document.write("Thanksgiving (USA)");
+ // December
+ if ((month == 11) && (date == 10)) document.write("Human Rights Day");
+ if ((month == 11) && (date == 21)) document.write("Winter Solstice");
+ if ((month == 11) && (date == 24)) document.write("Christmas Eve");
+ if ((month == 11) && (date == 25)) document.write("Christmas");
+ if ((month == 11) && (date == 26)) document.write("Boxing Day");
+ if ((month == 11) && (date == 31)) document.write("New Year's Eve");
+ document.write("<br />");
+//-->
+ </SCRIPT> 
+
+&nbsp;</td>
+                </tr>
+	            <tr>
+	              <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+	      <tr>
+	        <td align="center"><p><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Home','','rollover navigation/home 2.gif',1)"><img src="rollover navigation/home 1.gif" alt="" width="100" height="27" id="Home"></a><a href="aboutme.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About Me','','rollover navigation/aboutme 2.gif',1)"><img src="rollover navigation/aboutme 1.gif" alt="" width="100" height="27" id="About Me"></a><a href="usairlines.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US Airlines','','rollover navigation/usairlines 2.gif',1)"><img src="rollover navigation/usairlines 1.gif" alt="" width="100" height="27" id="US Airlines"></a><a href="animals.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Animals','','rollover navigation/animals 2.gif',1)"><img src="rollover navigation/animals 1.gif" alt="" width="100" height="27" id="Animals"></a><a href="logos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logos','','rollover navigation/logos 2.gif',1)"><img src="rollover navigation/logos 1.gif" alt="" width="100" height="27" id="Logos"></a><a href="games.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Games','','rollover navigation/games 2.gif',1)"><img src="rollover navigation/games 1.gif" alt="" width="100" height="27" id="Games"></a><a href="bodysystems.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Body Systems','','rollover navigation/bodysystems 2.gif',1)"><img src="rollover navigation/bodysystems 1.gif" alt="" width="100" height="27" id="Body Systems"></a><a href="usstates.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US States','','rollover navigation/usstates 2.gif',1)"><img src="rollover navigation/usstates 1.gif" alt="" width="100" height="27" id="US States"></a><a href="mybike.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('My Bike','','rollover navigation/mybike 2.gif',1)"><img src="rollover navigation/mybike 1.gif" alt="" width="100" height="27" id="My Bike"></a><a href="philadelphiaeagles.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Philadelphia Eagles','','rollover navigation/philadelphiaeagles 2.gif',1)"><img src="rollover navigation/philadelphiaeagles 1.gif" alt="" width="100" height="27" id="Philadelphia Eagles"></a><a href="cityofphiladelphia.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('City of Philadelphia','','rollover navigation/cityofphiladelphia 2.gif',1)"><img src="rollover navigation/cityofphiladelphia 1.gif" alt="" width="100" height="27" id="City of Philadelphia"></a><a href="imagemap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image Map','','rollover navigation/imagemap 2.gif',1)"><img src="rollover navigation/imagemap 1.gif" alt="" width="100" height="27" id="Image Map"></a><a href="bikes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Bikes','','rollover navigation/bikes 2.gif',1)"><img src="rollover navigation/bikes 1.gif" alt="" width="100" height="27" id="Bikes"></a><a href="climatechange.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Climate Change','','rollover navigation/climatechange 2.gif',1)"><img src="rollover navigation/climatechange 1.gif" alt="" width="100" height="27" id="Climate Change"></a><a href="globalwarming.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Global Warming','','rollover navigation/globalwarming 2.gif',1)"><img src="rollover navigation/globalwarming 1.gif" alt="" width="100" height="27" id="Global Warming"></a><a href="earth.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Earth','','rollover navigation/earth 2.gif',1)"><img src="rollover navigation/earth 1.gif" alt="" width="100" height="27" id="Earth"></a><a href="universe.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Universe','','rollover navigation/universe 2.gif',1)"><img src="rollover navigation/universe 1.gif" alt="" width="100" height="27" id="Universe"></a><a href="forms.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Forms','','rollover navigation/forms 2.gif',1)"><img src="rollover navigation/forms 1.gif" alt="" width="100" height="27" id="Forms"></a></p></td>
+          </tr>
+	      <tr>
+	        <td height="518" valign="top"><h1>List of Types of Bikes</h1>
+    <table>
+        <tr>
+            <td>Name (External link to a webpage with more info)</td>
+            <td>Image</td>
+            <td>Facts</td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Mountain_bike" target="_blank">Mountain Bikes</a></td>
+            <td><img src="pics/mountain1.jpg" alt="Mountain Bikes" width="150"></td>
+            <td>
+                <p>
+                    Mountain bikes usually have 26” or 29″ wide knobby tires which allow them to be ridden in loose dirt and over obstacles. These bikes have flat handlebars and rugged frames and components. Mountain bikes often have suspension to help any cyclist navigate rocky mountain trails. Many people ride mountain bikes on roads as well as trails. This does the bike no harm. It could be likened to one driving an SUV on the highway: the vehicle will operate fine–it is simply not the most efficient choice. While mountain-style bikes come in all price ranges, the lower end recreational versions are not suited for aggressive mountain biking but work great for trips on smooth dirt paths.
+            </p></td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Hybrid_bicycle" target="_blank">Hybrid Bikes</a></td>
+            <td><img src="pics/hybrid.jpg" alt="Hybrid Bikes" width="150"></td>
+            <td>
+                <p>
+                    Hybrids and Sport Comfort Bikes share the same comfort features but are distinguished by wheel size. Traditionally, hybrids have a larger road bike sized wheel with a slightly thinner compared to the comfort bikes which yield smaller, mountain style wheels.  Both bikes are loaded with comfort features and will work equally well on smooth dirt, paved trails, and family cycling trips. These bikes have a very upright position meant for comfort.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Road_bicycle" target="_blank">Road Bikes</a></td>
+            <td><img src="pics/road.jpg" alt="Road Bikes" width="150"></td>
+            <td>
+                <p>
+                    Road bikes can be identified by their skinny tires and down-turned or “drop” handlebars. These bikes rule the road due to their extreme efficiency and speed. The larger thin tires help it glide along the road with little effort, while the multi-position handlebar offers grip variations from upright to more aggressive. A road bike is the supreme choice for anyone whose intent is  to ride on pavement, especially for longer rides.  It is our great fortune to live in an area with an abundance of great roads for cycling.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Time_trial_bicycle" target="_blank">Triathlon Bikes</a></td>
+            <td><img src="pics/tri-tt.jpg" alt="Triathlon Bikes" width="150"></td>
+            <td>
+                <p>
+                    Bicycles built specifically for triathlon or time trial events are basically specialized road bikes. These machines have forward bull-horn shaped handlebars and aero bars. Aero bars allow the rider to lean forward in an aerodynamic position. The shifters on these bikes are located at the end of the aero bars. The geometry of the bicycle frame is designed to suit triathlon or time trial racing, both heavily focused on aerodynamics.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/BMX_bike" target="_blank">BMX Bikes</a></td>
+            <td><img src="pics/bmx.jpg" alt="BMX Bikes" width="150"></td>
+            <td>
+                <p>
+                    BMX stands for Bicycle Motor Cross because these single-speed bikes are raced around a short dirt track similar to the motor sport.  Frequently, the term BMX is used to describe any single-speed bike with a 20” wheel. These bikes are often very robust and durable and would be the best selection for anyone intending to do jumps or tricks.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Bicycle_commuting" target="_blank">Commuting Bikes</a></td>
+            <td><img src="pics/commuter.jpg" alt="Commuting Bikes" width="150"></td>
+            <td>
+                <p>
+                    Simply put, a commuting bike is any bicycle used as general transportation, regardless of the style. Commuting bikes generally have practical amenities such as lights, rear racks, bags, locks and fenders. These accessories make the bicycle a utilitarian tool. If cycling to work is impossible for you, try riding to the post office, grocery store or for other small errands. Using bicycles for transportation is a great way to get some exercise, save money, help the environment and to have fun!  Our experts can help you select an appropriate commuter bike or even adapt your bike to be more commuter-friendly.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Cyclo-cross_bicycle" target="_blank">Cyclocross Bikes</a></td>
+            <td><img src="pics/cyclocross.jpg" alt="Cyclocross Bikes" width="150"></td>
+            <td>
+                <p>
+                    A cyclocross bike has road bike style drop handlebars but with wider knobby tires. These bikes are designed to be raced around a dirt trail where obstacles have been placed at various intervals. These obstacles require the rider to dismount and carry the bicycle for short periods of time. Cyclocross events are a lot of fun and the bikes are versatile so they are a great do-anything bike.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Track_bicycle" target="_blank">Track Bikes</a></td>
+            <td><img src="pics/track.jpg" alt="Track Bikes" width="150"></td>
+            <td>
+                <p>
+                    A track bike is a road bike with a single gear that does not freewheel or coast.This means the cyclist cannot coast on this style of bike. In fact, true track bikes do not even have brakes so the athlete must use their leg strength to stop the cranks from turning, which stops the motion of the bike. Track racing is done in an indoor track with banked turns called a velodrome. Fixed gear bikes are the outdoor version of a track bike. They have a single, fixed gear but may have brakes and different styles of handlebars. These bikes are often used for racers in training because they force the athlete to spin their legs in a consistent circle and run a higher cadence. They are also used in cities or as foul weather bikes. Because there are so few moving parts on a fixed gear, they are inexpensive and little can go wrong. Finally, many individuals ride “fixies” for the noblest of all reasons, FUN! Fun, coupled with a deep rooted nostalgic connection to the early years of cycling when all bikes were fixed gears.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Tandem_bicycle" target="_blank">Tandem Bikes</a></td>
+            <td><img src="pics/tandem.jpg" alt="Tandem Bikes" width="150"></td>
+            <td>
+                <p>
+                    A tandem is a bicycle built for two. They come in many styles and are the great leveler of the cycling world. Two riders of different abilities can enjoy a ride at the same pace when riding a tandem. They work well with younger riders, new cyclists, or the blind. Tandems do not require any special skill to ride and can be great fun…as long as you don’t argue about who is pedaling more.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Tricycle" target="_blank">Adult Trike Bikes</a></td>
+            <td><img src="pics/adult.jpg" alt="Adult Trike Bikes" width="150"></td>
+            <td>
+                <p>
+                    An adult trike is exactly what it sounds like: a three wheeled bike designed for an adult. These bikes come in many different configurations. Trikes can be used by people who have difficulty balancing, as industrial transportation vehicles, or by someone who simply enjoys fun on three wheels.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Folding_bicycle" target="_blank">Folding Bikes</a></td>
+            <td><img src="pics/folding.png" alt="Folding Bikes" width="150"></td>
+            <td>
+                <p>
+                    A folding bike can be a great travel companion.  Because they fold, they fit easily on a subway, in the trunk of a car, or on a boat. When traveling by air one can avoid the additional charges and hassle associated with transporting a full sized bicycle.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Kids Bikes (no external link to a webpage with more info)</td>
+            <td><img src="pics/kids1.jpg" alt="Kids Bikes" width="150"></td>
+            <td>
+                <p>
+                    A child’s bike is a bicycle that has been designed specifically for youth. Every aspect of these vehicles is scaled down to be safe and appropriate for a child. While kids find cycling to be lots of fun, it is important to remind them that a bicycle is not a toy, it is a vehicle that is fun when used safely.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Cruiser_bicycle" target="_blank">Beach Cruiser Bikes</a></td>
+            <td><img src="pics/beach-bike.jpg" alt="Beach Cruiser Bikes" width="150"></td>
+            <td>
+                <p>
+                    A beach Cruiser is a bicycle designed for riding short distances on flat terrain, like a boardwalk. Cruisers are identifiable by high handle bars and usually have fenders, and chain guards. Typically these bicycles only have a few speeds since they are not designed to be ridden in hilly areas.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Recumbent_bicycle" target="_blank">Recumbent Bikes</a></td>
+            <td><img src="pics/recumbent.jpg" alt="Recumbent Bikes" width="150"></td>
+            <td>
+                <p>
+                    Recumbent bicycles are non-traditional looking bicycles where one sits lower to the ground in a seat that looks like a chair. They come in many different configurations consisting of long to short wheelbases, above and under seat steering, two, three and four wheel varieties, tandem recumbents and many other variations. The back rest of the seat allows the rider to turn a larger gear since they have something to brace against, similar to doing a seated leg press. However, when riding a recumbent one cannot stand as they pedal up a challenging hill.
+                </p>
+            </td>
+        </tr>
+    </table>&nbsp;</td>
+          </tr>
+	      <tr>
+	        <td align="center"><a href="index.html">Home</a> | <a href="aboutme.html">About Me</a> | <a href="usairlines.html">US Airlines</a> | <a href="animals.html">Animals</a> | <a href="logos.html">Logos</a> | <a href="games.html">Games</a> | <a href="bodysystems.html">Body Systems</a> | <a href="usstates.html">US States</a> | <a href="mybike.html">My Bike</a> | <a href="philadelphiaeagles.html">Philadelphia Eagles</a> | <a href="cityofphiladelphia.html">City of Philadelphia</a><a href="imagemap.html">Image Map</a> | <a href="bikes.html">Bikes</a> | <a href="climatechange.html">Climate Change</a> | <a href="globalwarming.html">Global Warming</a> | <a href="earth.html">Earth</a> | <a href="universe.html">Universe</a> | <a href="forms.html">Forms</a></td>
+        </tr>
+	      <tr>
+	        <td><a href="mailto: tug81042@temple.edu">Contact the web host</a></td>
+          </tr>
+        </tbody>
+      </table>
+	</div>
+</body>
+</html>

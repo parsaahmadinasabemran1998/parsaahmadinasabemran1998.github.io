@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#usstates-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+    min-height: 100%;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    float: left;
+    clear: left;
+}
+
+a:link {
+	color: #00FE08;
+}
+
+a:visited {
+	color: #A5D0FD;
+}
+
+a:hover {
+	color: #5E0060;
+	text-decoration: none;
+}
+a:active {
+	color: #061BFF;
+}
+
+table {
+    background-color: #006D77;
+    align-self: center;
+    float: none;
+    clear: both;
+    background-repeat: repeat;
+}
+
+table tr td {
+    color: #FFFFFF;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-style: oblique;
+    font-weight: 100;
+    font-size: 100%;
+    position: static;
+}

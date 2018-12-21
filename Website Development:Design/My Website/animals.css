@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#animals-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+    min-height: 100%;
+    color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+a:link {
+	color: #00CFFF;
+}
+
+a:visited {
+	color: #F600FF;
+}
+
+a:hover {
+	color: #FFF400;
+	text-decoration: none;
+}
+a:active {
+	color: #F95B5E;
+}
+
+table {
+	background-color: #005208;
+}
+
+table tr td {
+    color: #FFFFFF;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-style: oblique;
+    font-weight: 100;
+    font-size: 100%;
+    position: static;
+}

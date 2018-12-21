@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+#imagemap-wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 960px;
+    min-height: 100%;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+body {
+    background-color: #FFFFFF;
+}
+
+a:link {
+	color: #FAEF00;
+}
+
+a:visited {
+	color: #00FBF7;
+}
+
+a:hover {
+	color: #FF9800;
+	text-decoration: none;
+}
+a:active {
+	color: #EB00FF;
+}
+
+table {
+    background-color: #027601;
+}
+
+table tr td {
+    color: #FFFFFF;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-style: oblique;
+    font-weight: 100;
+    font-size: 100%;
+    position: static;
+}
